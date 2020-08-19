@@ -1,1 +1,211 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* remove default margins and padding */
+
+
+/* ---------------body--------------- */
+
+body {
+    /* background */
+    margin: 0px;
+    padding: 0px;
+    background-color: #EFEFF0;
+}
+
+
+/*------------ paddings (done in %) --------------*/
+
+.pad-half {
+    padding: 0.5%;
+}
+
+.pad-1 {
+    padding: 1%;
+}
+
+.pad-2 {
+    padding: 2%;
+}
+
+.pad-3 {
+    padding: 3%;
+}
+
+.pad-4 {
+    padding: 4%;
+}
+
+.pad-5 {
+    padding: 5%;
+}
+
+.pad-6 {
+    padding: 6%;
+}
+
+.pad-7 {
+    padding: 7%;
+}
+
+.pad-8 {
+    padding: 8%;
+}
+
+.pad-9 {
+    padding: 9%;
+}
+
+.pad-10 {
+    padding: 10%;
+}
+
+
+/*------------------ margins (in percentage) -----------------*/
+
+.mg-half {
+    margin: 0.5%;
+}
+
+.mg-1 {
+    margin: 1%;
+}
+
+.mg-2 {
+    margin: 2%;
+}
+
+.mg-3 {
+    margin: 3%;
+}
+
+.mg-4 {
+    margin: 4%;
+}
+
+.mg-5 {
+    margin: 5%;
+}
+
+.mg-6 {
+    margin: 6%;
+}
+
+.mg-7 {
+    margin: 7%;
+}
+
+.mg-8 {
+    margin: 8%;
+}
+
+.mg-9 {
+    margin: 9%;
+}
+
+.mg-10 {
+    margin: 10%;
+}
+
+
+/* ----------------- grid columnn spans (display:grid) --------------------------*/
+
+.col-1 {
+    grid-column: span 1;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-5 {
+    grid-column: span 5;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-7 {
+    grid-column: span 7;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.col-9 {
+    grid-column: span 9;
+}
+
+.col-10 {
+    grid-column: span 10;
+}
+
+
+/* ---------------- grid row spans (display: grid) -----------------*/
+
+.row-1 {
+    grid-row: span 1;
+}
+
+.row-2 {
+    grid-row: span 2;
+}
+
+.row-3 {
+    grid-row: span 3;
+}
+
+.row-4 {
+    grid-row: span 4;
+}
+
+.row-4 {
+    grid-row: span 4;
+}
+
+.row-5 {
+    grid-row: span 5;
+}
+
+.row-6 {
+    grid-row: span 6;
+}
+
+.row-7 {
+    grid-row: span 7;
+}
+
+.row-8 {
+    grid-row: span 8;
+}
+
+
+/* ---------------colours------------------- */
+
+.primary {
+    background-color: #C52601;
+}
+
+.secondary {
+    background-color: white;
+}
+
+
+/* buttons, links, ul-li, inputs */
+
+a,
+button,
+input {
+    outline: none;
+    border: none;
+}
