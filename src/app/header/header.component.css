@@ -1,7 +1,27 @@
-/* li */
+ nav {
+     display: grid;
+     grid-template-columns: repeat(10, 1fr);
+     box-shadow: 3px 3px 3px 3px grey;
+ }
+ /* unordered list */
 
-li {
-    list-style-type: none;
-    display: inline-block;
-    justify-items: right;
-}
+ ul {
+     /* remove default margins and paddings  */
+     margin: 0px;
+     padding: 0px;
+     justify-items: center;
+     justify-content: center;
+ }
+ /* li */
+
+ li {
+     /* remove bullet points */
+     list-style-type: none;
+     /* set arrange list items on one line */
+     display: inline-block;
+ }
+ /* logo */
+
+ img {
+     height: 35px;
+ }

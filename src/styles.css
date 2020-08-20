@@ -7,6 +7,8 @@
 /* ---------------body--------------- */
 
 body {
+    /* display */
+    display: grid;
     /* background */
     margin: 0px;
     padding: 0px;
@@ -108,6 +110,92 @@ body {
 }
 
 
+/*--------- right margin (in percentages) ---------------- */
+
+.mg-r-1 {
+    margin-right: 1%;
+}
+
+.mg-r-2 {
+    margin-right: 2%;
+}
+
+.mg-r-3 {
+    margin-right: 3%;
+}
+
+.mg-r-4 {
+    margin-right: 4%;
+}
+
+.mg-r-5 {
+    margin-right: 5%;
+}
+
+.mg-r-6 {
+    margin-right: 6%;
+}
+
+.mg-r-7 {
+    margin-right: 7%;
+}
+
+.mg-r-8 {
+    margin-right: 8%;
+}
+
+.mg-r-9 {
+    margin-right: 9%;
+}
+
+.mg-r-10 {
+    margin-right: 10%;
+}
+
+
+/* -----------------left margin (in percentages) ---------------------*/
+
+.mg-l-1 {
+    margin-left: 1%;
+}
+
+.mg-l-2 {
+    margin-left: 2%;
+}
+
+.mg-l-3 {
+    margin-left: 3%;
+}
+
+.mg-l-4 {
+    margin-left: 4%;
+}
+
+.mg-l-5 {
+    margin-left: 5%;
+}
+
+.mg-l-6 {
+    margin-left: 6%;
+}
+
+.mg-l-7 {
+    margin-left: 7%;
+}
+
+.mg-l-8 {
+    margin-left: 8%;
+}
+
+.mg-l-9 {
+    margin-left: 9%;
+}
+
+.mg-l-10 {
+    margin-left: 10%;
+}
+
+
 /* ----------------- grid columnn spans (display:grid) --------------------------*/
 
 .col-1 {
@@ -190,14 +278,37 @@ body {
 }
 
 
+/* boxes and containers */
+
+.box {
+    background-color: white;
+    box-shadow: 10px 10px 10px 10px gray;
+}
+
+
+/* container */
+
+.container {
+    /* set display to grid */
+    /* each container can be divided into 10 columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
 /* ---------------colours------------------- */
 
 .primary {
-    background-color: #C52601;
+    background-color: yellow;
 }
 
 .secondary {
     background-color: white;
+}
+
+.header {
+    font-weight: bolder;
+    font-size: larger;
 }
 
 
@@ -208,4 +319,9 @@ button,
 input {
     outline: none;
     border: none;
+}
+
+button,
+a {
+    cursor: pointer;
 }

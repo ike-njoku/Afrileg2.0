@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from '../categorieyIntercace';
+import { Category } from '../categoryIntercace';
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -7,12 +7,11 @@ import { Category } from '../categorieyIntercace';
 })
 export class CategoriesComponent implements OnInit {
 
-  categories = [
-    'Agriculture',
-    'Technology',
-    'Ternary',
-    'Textile'
-  ];
+  categories: Category = {
+    id: 1,
+    name: 'Agriculture'
+  };
+
 
   constructor() { }
 
