@@ -1,0 +1,16 @@
+<div class="box pad-1">
+    <!-- slide Images -->
+    <img class="col-8" data-slideImage alt="">
+
+    <!-- slide controls -->
+    <span (click)="displayPreviousSlide()" class=" previousSlide fa fa-chevron-left col-1 "></span>
+    <span (click)="displayNextSlide()" class="nextSlide fa fa-chevron-right col-1 "></span>
+
+    <!-- indicators -->
+    <div>
+        <ul>
+            <li class="fa fa-circle mg-1 " *ngFor="let slideImage of slideImages " (click)="goToSlide(slideImage.imageLocation)"></li>
+        </ul>
+    </div>
+
+</div>

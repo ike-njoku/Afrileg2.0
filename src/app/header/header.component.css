@@ -1,7 +1,6 @@
  nav {
      display: grid;
      grid-template-columns: repeat(10, 1fr);
-     box-shadow: 3px 3px 3px 3px grey;
  }
  /* unordered list */
 
@@ -19,9 +18,12 @@
      list-style-type: none;
      /* set arrange list items on one line */
      display: inline-block;
+     /* float the links to the right */
+     float: right;
  }
  /* logo */
 
  img {
      height: 35px;
  }
+ /* input and buttons */

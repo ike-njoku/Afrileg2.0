@@ -1,0 +1,20 @@
+ul {
+    /* reomve the padding and margins from the unordered list */
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* removing the bullet point markers  */
+
+ul li {
+    list-style-type: none;
+    /* adding borders */
+    border: solid 1px transparent;
+    border-radius: 10px;
+}
+
+ul li:hover {
+    opacity: 80%;
+    font-weight: bolder;
+}

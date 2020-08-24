@@ -278,11 +278,25 @@ body {
 }
 
 
+/* ------------------box shadows-------------------- */
+
+.shd-1 {
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.shd-2 {
+    box-shadow: 4px 4px 4px 4px gray;
+}
+
+.shd-3 {
+    box-shadow: 6px 6px 6px 6px gray;
+}
+
+
 /* boxes and containers */
 
 .box {
     background-color: white;
-    box-shadow: 10px 10px 10px 10px gray;
 }
 
 
@@ -292,14 +306,14 @@ body {
     /* set display to grid */
     /* each container can be divided into 10 columns */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(10, 1fr);
 }
 
 
 /* ---------------colours------------------- */
 
 .primary {
-    background-color: yellow;
+    background-color: #FB7261;
 }
 
 .secondary {
@@ -324,4 +338,16 @@ input {
 button,
 a {
     cursor: pointer;
+}
+
+
+/*---------------- media queries -----------------------*/
+
+@media (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+    .col-full {
+        grid-column: span 10;
+    }
 }

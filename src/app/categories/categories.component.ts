@@ -1,3 +1,4 @@
+import { CATEGORIES } from './../mocdCategoriesDelete';
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../categoryIntercace';
 @Component({
@@ -7,10 +8,7 @@ import { Category } from '../categoryIntercace';
 })
 export class CategoriesComponent implements OnInit {
 
-  categories: Category = {
-    id: 1,
-    name: 'Agriculture'
-  };
+  categories: Category[] = CATEGORIES;
 
 
   constructor() { }
