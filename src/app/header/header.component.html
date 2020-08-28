@@ -17,7 +17,29 @@
         </li>
         <!-- profile -->
         <li>
-            <a><i class=" fa fa-user"></i></a>
+            <!-- show the drop down on mouseover -->
+            <a (mouseover)='showDropDown()'><i class=" fa fa-user"></i></a>
         </li>
     </ul>
 </nav>
+
+<div *ngIf="displayProfileDropDown" (mouseleave)='showDropDown()' class="shd-1 pad-2 box neutral profileDropDown ">
+    <div>
+        <div class="mg-10">
+            <a> <i class="fa fa-user"></i> Profile</a>
+        </div>
+        <div class="mg-10">
+            <a> <i class="fa fa-archive"></i> Orders</a>
+        </div>
+        <div class="mg-10">
+            <a>
+                <i class="fa fa-heart"></i> Saved Items
+            </a>
+        </div>
+        <div class="mg-10">
+            <hr>
+            <a> Sign Out</a>
+
+        </div>
+    </div>
+</div>

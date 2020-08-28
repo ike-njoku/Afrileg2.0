@@ -27,3 +27,12 @@
      height: 35px;
  }
  /* input and buttons */
+ /* profile Drop Down */
+
+ .profileDropDown {
+     width: 30%;
+     position: fixed;
+     right: 0;
+     margin-right: 2%;
+     margin-top: -2%;
+ }
