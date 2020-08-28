@@ -81,7 +81,10 @@ export class ImageSlideComponent implements OnInit {
 
 updateDisplay(){
   let image = document.querySelector('[data-slideImage]');
+  image.classList.remove('fadeIn');
   image.src = this.slideImages[this.slideImageIndex].imageLocation;
+  image.classList.add('fadeIn');
+
 }
 
   ngOnInit(): void {

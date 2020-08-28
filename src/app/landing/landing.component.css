@@ -1,0 +1,8 @@
+@media(max-width:1240px) and (min-width:600px) {
+    app-image-slide {
+        grid-column: span 12;
+    }
+    app-categories {
+        grid-column: span 12;
+    }
+}

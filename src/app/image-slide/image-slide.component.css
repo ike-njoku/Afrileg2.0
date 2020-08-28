@@ -51,12 +51,3 @@ ul li {
 .fa:hover {
     opacity: 60%;
 }
-
-
-/* media queries */
-
-@media (max-width:400px) {
-    img {
-        height: 150px;
-    }
-}
