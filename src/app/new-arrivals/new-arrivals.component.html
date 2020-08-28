@@ -12,7 +12,7 @@
         </div>
 
         <!-- list of New Arrivals -->
-        <div class="box shd-1 mg-2 pad-10 col-2 col-sm-half " *ngFor="let product of products">
+        <a class="box shd-1 mg-2 pad-10 col-2 col-sm-half " *ngFor="let product of products">
 
             <!-- product Image -->
             <div class="imageContainer">
@@ -28,7 +28,7 @@
             <div class="productPrice">
                 {{product.price|currency:'NGN'}}
             </div>
-        </div>
+        </a>
 
     </div>
 

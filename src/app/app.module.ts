@@ -11,6 +11,7 @@ import { ImageSlideComponent } from './image-slide/image-slide.component';
 import { HotSellingComponent } from './hot-selling/hot-selling.component';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     HotSellingComponent,
     NewArrivalsComponent,
     FooterComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
