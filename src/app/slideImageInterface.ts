@@ -1,3 +1,3 @@
-export class SlideImage{
+export interface SlideImage{
   'imageLocation': string;
 }

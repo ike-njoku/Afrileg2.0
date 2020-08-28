@@ -1,353 +1,454 @@
-/* You can add global styles to this file, and also import other style files */
+    /* You can add global styles to this file, and also import other style files */
+    /* remove default margins and padding */
+    /* ---------------body--------------- */
 
-
-/* remove default margins and padding */
-
-
-/* ---------------body--------------- */
-
-body {
-    /* display */
-    display: grid;
-    /* background */
-    margin: 0px;
-    padding: 0px;
-    background-color: #EFEFF0;
-}
-
-
-/*------------ paddings (done in %) --------------*/
-
-.pad-half {
-    padding: 0.5%;
-}
-
-.pad-1 {
-    padding: 1%;
-}
-
-.pad-2 {
-    padding: 2%;
-}
-
-.pad-3 {
-    padding: 3%;
-}
-
-.pad-4 {
-    padding: 4%;
-}
-
-.pad-5 {
-    padding: 5%;
-}
-
-.pad-6 {
-    padding: 6%;
-}
-
-.pad-7 {
-    padding: 7%;
-}
-
-.pad-8 {
-    padding: 8%;
-}
-
-.pad-9 {
-    padding: 9%;
-}
-
-.pad-10 {
-    padding: 10%;
-}
-
-
-/*------------------ margins (in percentage) -----------------*/
-
-.mg-half {
-    margin: 0.5%;
-}
-
-.mg-1 {
-    margin: 1%;
-}
-
-.mg-2 {
-    margin: 2%;
-}
-
-.mg-3 {
-    margin: 3%;
-}
-
-.mg-4 {
-    margin: 4%;
-}
-
-.mg-5 {
-    margin: 5%;
-}
-
-.mg-6 {
-    margin: 6%;
-}
-
-.mg-7 {
-    margin: 7%;
-}
-
-.mg-8 {
-    margin: 8%;
-}
-
-.mg-9 {
-    margin: 9%;
-}
-
-.mg-10 {
-    margin: 10%;
-}
-
-
-/*--------- right margin (in percentages) ---------------- */
-
-.mg-r-1 {
-    margin-right: 1%;
-}
-
-.mg-r-2 {
-    margin-right: 2%;
-}
-
-.mg-r-3 {
-    margin-right: 3%;
-}
-
-.mg-r-4 {
-    margin-right: 4%;
-}
-
-.mg-r-5 {
-    margin-right: 5%;
-}
-
-.mg-r-6 {
-    margin-right: 6%;
-}
-
-.mg-r-7 {
-    margin-right: 7%;
-}
-
-.mg-r-8 {
-    margin-right: 8%;
-}
-
-.mg-r-9 {
-    margin-right: 9%;
-}
-
-.mg-r-10 {
-    margin-right: 10%;
-}
-
-
-/* -----------------left margin (in percentages) ---------------------*/
-
-.mg-l-1 {
-    margin-left: 1%;
-}
-
-.mg-l-2 {
-    margin-left: 2%;
-}
-
-.mg-l-3 {
-    margin-left: 3%;
-}
-
-.mg-l-4 {
-    margin-left: 4%;
-}
-
-.mg-l-5 {
-    margin-left: 5%;
-}
-
-.mg-l-6 {
-    margin-left: 6%;
-}
-
-.mg-l-7 {
-    margin-left: 7%;
-}
-
-.mg-l-8 {
-    margin-left: 8%;
-}
-
-.mg-l-9 {
-    margin-left: 9%;
-}
-
-.mg-l-10 {
-    margin-left: 10%;
-}
-
-
-/* ----------------- grid columnn spans (display:grid) --------------------------*/
-
-.col-1 {
-    grid-column: span 1;
-}
-
-.col-2 {
-    grid-column: span 2;
-}
-
-.col-3 {
-    grid-column: span 3;
-}
-
-.col-4 {
-    grid-column: span 4;
-}
-
-.col-5 {
-    grid-column: span 5;
-}
-
-.col-6 {
-    grid-column: span 6;
-}
-
-.col-7 {
-    grid-column: span 7;
-}
-
-.col-8 {
-    grid-column: span 8;
-}
-
-.col-9 {
-    grid-column: span 9;
-}
-
-.col-10 {
-    grid-column: span 10;
-}
-
-
-/* ---------------- grid row spans (display: grid) -----------------*/
-
-.row-1 {
-    grid-row: span 1;
-}
-
-.row-2 {
-    grid-row: span 2;
-}
-
-.row-3 {
-    grid-row: span 3;
-}
-
-.row-4 {
-    grid-row: span 4;
-}
-
-.row-4 {
-    grid-row: span 4;
-}
-
-.row-5 {
-    grid-row: span 5;
-}
-
-.row-6 {
-    grid-row: span 6;
-}
-
-.row-7 {
-    grid-row: span 7;
-}
-
-.row-8 {
-    grid-row: span 8;
-}
-
-
-/* ------------------box shadows-------------------- */
-
-.shd-1 {
-    box-shadow: 2px 2px 2px 2px gray;
-}
-
-.shd-2 {
-    box-shadow: 4px 4px 4px 4px gray;
-}
-
-.shd-3 {
-    box-shadow: 6px 6px 6px 6px gray;
-}
-
-
-/* boxes and containers */
-
-.box {
-    background-color: white;
-}
-
-
-/* container */
-
-.container {
-    /* set display to grid */
-    /* each container can be divided into 10 columns */
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-}
-
-
-/* ---------------colours------------------- */
-
-.primary {
-    background-color: #FB7261;
-}
-
-.secondary {
-    background-color: white;
-}
-
-.header {
-    font-weight: bolder;
-    font-size: larger;
-}
-
-
-/* buttons, links, ul-li, inputs */
-
-a,
-button,
-input {
-    outline: none;
-    border: none;
-}
-
-button,
-a {
-    cursor: pointer;
-}
-
-
-/*---------------- media queries -----------------------*/
-
-@media (max-width: 500px) {
     body {
-        background-color: lightblue;
+        /* display */
+        display: grid;
+        /* background */
+        margin: 0px;
+        padding: 0px;
+        background-color: #EFEFF0;
     }
-    .col-full {
+    /*------------ paddings (done in %) --------------*/
+
+    .pad-half {
+        padding: 0.5%;
+    }
+
+    .pad-1 {
+        padding: 1%;
+    }
+
+    .pad-2 {
+        padding: 2%;
+    }
+
+    .pad-3 {
+        padding: 3%;
+    }
+
+    .pad-4 {
+        padding: 4%;
+    }
+
+    .pad-5 {
+        padding: 5%;
+    }
+
+    .pad-6 {
+        padding: 6%;
+    }
+
+    .pad-7 {
+        padding: 7%;
+    }
+
+    .pad-8 {
+        padding: 8%;
+    }
+
+    .pad-9 {
+        padding: 9%;
+    }
+
+    .pad-10 {
+        padding: 10%;
+    }
+    /*------------------ margins (in percentage) -----------------*/
+
+    .mg-half {
+        margin: 0.5%;
+    }
+
+    .mg-1 {
+        margin: 1%;
+    }
+
+    .mg-2 {
+        margin: 2%;
+    }
+
+    .mg-3 {
+        margin: 3%;
+    }
+
+    .mg-4 {
+        margin: 4%;
+    }
+
+    .mg-5 {
+        margin: 5%;
+    }
+
+    .mg-6 {
+        margin: 6%;
+    }
+
+    .mg-7 {
+        margin: 7%;
+    }
+
+    .mg-8 {
+        margin: 8%;
+    }
+
+    .mg-9 {
+        margin: 9%;
+    }
+
+    .mg-10 {
+        margin: 10%;
+    }
+    /*--------- right margin (in percentages) ---------------- */
+
+    .mg-r-1 {
+        margin-right: 1%;
+    }
+
+    .mg-r-2 {
+        margin-right: 2%;
+    }
+
+    .mg-r-3 {
+        margin-right: 3%;
+    }
+
+    .mg-r-4 {
+        margin-right: 4%;
+    }
+
+    .mg-r-5 {
+        margin-right: 5%;
+    }
+
+    .mg-r-6 {
+        margin-right: 6%;
+    }
+
+    .mg-r-7 {
+        margin-right: 7%;
+    }
+
+    .mg-r-8 {
+        margin-right: 8%;
+    }
+
+    .mg-r-9 {
+        margin-right: 9%;
+    }
+
+    .mg-r-10 {
+        margin-right: 10%;
+    }
+    /* -----------------left margin (in percentages) ---------------------*/
+
+    .mg-l-1 {
+        margin-left: 1%;
+    }
+
+    .mg-l-2 {
+        margin-left: 2%;
+    }
+
+    .mg-l-3 {
+        margin-left: 3%;
+    }
+
+    .mg-l-4 {
+        margin-left: 4%;
+    }
+
+    .mg-l-5 {
+        margin-left: 5%;
+    }
+
+    .mg-l-6 {
+        margin-left: 6%;
+    }
+
+    .mg-l-7 {
+        margin-left: 7%;
+    }
+
+    .mg-l-8 {
+        margin-left: 8%;
+    }
+
+    .mg-l-9 {
+        margin-left: 9%;
+    }
+
+    .mg-l-10 {
+        margin-left: 10%;
+    }
+    /* ----------------- grid columnn spans (display:grid) --------------------------*/
+
+    .col-1 {
+        grid-column: span 1;
+    }
+
+    .col-2 {
+        grid-column: span 2;
+    }
+
+    .col-3 {
+        grid-column: span 3;
+    }
+
+    .col-4 {
+        grid-column: span 4;
+    }
+
+    .col-5 {
+        grid-column: span 5;
+    }
+
+    .col-6 {
+        grid-column: span 6;
+    }
+
+    .col-7 {
+        grid-column: span 7;
+    }
+
+    .col-8 {
+        grid-column: span 8;
+    }
+
+    .col-9 {
+        grid-column: span 9;
+    }
+
+    .col-10 {
         grid-column: span 10;
     }
-}
+
+    .col-11 {
+        grid-column: span 11;
+    }
+
+    .col-12 {
+        grid-column: span 12;
+    }
+    /* ---------------- grid row spans (display: grid) -----------------*/
+
+    .row-1 {
+        grid-row: span 1;
+    }
+
+    .row-2 {
+        grid-row: span 2;
+    }
+
+    .row-3 {
+        grid-row: span 3;
+    }
+
+    .row-4 {
+        grid-row: span 4;
+    }
+
+    .row-4 {
+        grid-row: span 4;
+    }
+
+    .row-5 {
+        grid-row: span 5;
+    }
+
+    .row-6 {
+        grid-row: span 6;
+    }
+
+    .row-7 {
+        grid-row: span 7;
+    }
+
+    .row-8 {
+        grid-row: span 8;
+    }
+    /* ------------------box shadows-------------------- */
+
+    .shd-1 {
+        box-shadow: 2px 2px 2px 2px gray;
+    }
+
+    .shd-2 {
+        box-shadow: 4px 4px 4px 4px gray;
+    }
+
+    .shd-3 {
+        box-shadow: 6px 6px 6px 6px gray;
+    }
+    /* -------------border radius ----------------- */
+
+    .rad-10 {
+        border-radius: 10px;
+    }
+
+    .rad-5 {
+        border-radius: 5px;
+    }
+    /* boxes and containers */
+
+    .box {
+        background-color: white;
+    }
+    /* container */
+
+    .container {
+        /* set display to grid */
+        /* each container can be divided into 10 columns */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    /* -------------image containers ---------------------*/
+
+    .imageContainer {
+        /* no spill overs */
+        overflow: hidden;
+        /* center the content of the container */
+        text-align: center;
+    }
+    /*------ banners --------------*/
+
+    .banner {
+        grid-column: span 8;
+        background-size: cover;
+    }
+    /* dropdowns and dropdown toggles */
+
+    .dropdown-Toggle {
+        display: none;
+    }
+    /* --------------- colours ------------------- */
+
+    .primary {
+        background-color: #D95A00;
+    }
+
+    .secondary {
+        background-color: #12225B;
+        color: white;
+    }
+
+    .neutral {
+        background-color: white;
+    }
+
+    .header {
+        font-weight: bolder;
+        font-size: larger;
+    }
+    /* -----------buttons, links, ul-li, inputs--------------- */
+
+    a,
+    button,
+    input {
+        outline: none;
+        border: none;
+    }
+
+    button,
+    a {
+        cursor: pointer;
+    }
+    /* fontawesome */
+
+    .fa {
+        cursor: pointer;
+    }
+
+    .fa:hover {
+        color: red;
+    }
+    /*---------------- media queries -----------------------*/
+    /* mobile phones */
+
+    @media (max-width: 600px) {
+        /* full column on small screen */
+        .col-sm-full {
+            grid-column: span 12;
+        }
+        /* half column on small screen */
+        .col-sm-half {
+            grid-column: span 6;
+        }
+        .dropdown-Toggle {
+            display: inline-block;
+        }
+        .banner {
+            grid-column: span 12;
+        }
+    }
+    /* tablets */
+
+    @media (max-width:1250px) and (min-width:600px) {
+        .col-sm-half {
+            grid-column: span 4;
+        }
+    }
+    /* ----------------------------------------ANIMATIONS--------------------------------------------- */
+    /* slideUp animation */
+
+    .slideUp {
+        -webkit-animation-name: slideUp;
+        /* Chrome, Safari, Opera */
+        -webkit-animation-duration: 1s;
+        /* Chrome, Safari, Opera */
+        animation-name: slideUp;
+        animation-duration: 1s;
+        animation-name: slideUp;
+        animation-duration: 1s;
+    }
+
+    @-webkit-keyframes slideUp {
+        0% {
+            top: 30px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+    /* slideInLeft */
+
+    .slideInLeft {
+        -webkit-animation-name: slideInLeft;
+        /* Chrome, Safari, Opera */
+        -webkit-animation-duration: 1.0s;
+        /* Chrome, Safari, Opera */
+        animation-name: slideInLeft;
+        animation-duration: 1s;
+        animation-name: slideInLeft;
+        animation-duration: 1s;
+    }
+
+    @-webkit-keyframes slideInLeft {
+        0% {
+            right: 30px;
+        }
+        100% {
+            right: 0px;
+        }
+    }
+
+    .fadeIn {
+        -webkit-animation-name: fadeIn;
+        /* Chrome, Safari, Opera */
+        -webkit-animation-duration: 1s;
+        /* Chrome, Safari, Opera */
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }

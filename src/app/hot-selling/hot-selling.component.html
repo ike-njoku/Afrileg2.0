@@ -1,17 +1,31 @@
 <!-- hot selling -->
-
-<div class="box mg-2 pad-2">
+<div style=" border-top: solid 50px gray; border-top-left-radius: 10px; border-top-right-radius: 10px;" class="box mg-2 pad-2">
     <!-- header  -->
-    <div class="header mg-3">
+    <div class="header mg-2">
         Hot Selling
-        <hr>
     </div>
-    <!-- list of hot Selling -->
-    <ul>
-        <li class="mg-2 pad-2" *ngFor="let category of categories">
-            <a>{{category.name}}
-          </a>
-            <hr>
-        </li>
-    </ul>
+    <!-- ------------------- -->
+    <div class="container">
+        <!-- list of hot Selling -->
+        <div class="box shd-1 mg-2 pad-10 col-2 col-sm-half " *ngFor="let product of products">
+
+            <!-- product Image -->
+            <div class="imageContainer">
+                <img class="productImage" src="{{product.image1}}" alt="">
+            </div>
+
+            <!-- product name -->
+            <div class="productName">
+                {{product.name}}
+            </div>
+
+            <!-- product Price -->
+            <div class="productPrice">
+                {{product.price|currency:'NGN'}}
+            </div>
+        </div>
+
+    </div>
+
+
 </div>

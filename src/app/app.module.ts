@@ -9,6 +9,8 @@ import { ClientLogInComponent } from './client-log-in/client-log-in.component';
 import { LandingComponent } from './landing/landing.component';
 import { ImageSlideComponent } from './image-slide/image-slide.component';
 import { HotSellingComponent } from './hot-selling/hot-selling.component';
+import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { HotSellingComponent } from './hot-selling/hot-selling.component';
     LandingComponent,
     ImageSlideComponent,
     HotSellingComponent,
+    NewArrivalsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

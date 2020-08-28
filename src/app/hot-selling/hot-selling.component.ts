@@ -1,4 +1,7 @@
+import { PRODUCTS } from './../mockProductsDelete';
+import { Products } from './../productInterface';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-hot-selling',
@@ -6,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hot-selling.component.css']
 })
 export class HotSellingComponent implements OnInit {
-
+  products: Products[] = PRODUCTS;
   constructor() { }
 
   ngOnInit(): void {

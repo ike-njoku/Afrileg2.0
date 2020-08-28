@@ -1,0 +1,26 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.productImage {
+    width: 100%;
+}
+
+.header {
+    font-size: 3em;
+}
+
+.productPrice {
+    margin-top: 2%;
+    font-size: small;
+}
+
+.productName {
+    font-size: large;
+    font-weight: bold;
+}
+
+.banner {
+    background-image: url('/assets/banners/newArrivals.jpg');
+}

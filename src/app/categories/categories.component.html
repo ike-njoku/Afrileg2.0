@@ -3,14 +3,21 @@
     <!-- header  -->
     <div class="header">
         CATEGORIES
+        <!-- collapse/expand  button (for smaller screens) -->
+        <i (click)="showCategories()" data-toggleCategoriesDisplay class="dropdown-Toggle fa fa-caret-down"></i>
         <hr>
     </div>
     <!-- list of categories -->
-    <ul>
-        <li class="mg-2 pad-2" *ngFor="let category of categories">
-            <a>{{category.name}}
+    <div *ngIf="categoryVisibility" class="dropdown" data-categories>
+        <ul>
+            <li class="mg-2 pad-2" *ngFor="let category of categories">
+                <a>{{category.name}}
             </a>
-            <hr>
-        </li>
-    </ul>
-</div>``
+                <hr>
+            </li>
+            <div>
+                View More <i class="fa fa-caret-right"></i>
+            </div>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.container {
+    justify-content: end;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 3%;
+}
+
+.header {
+    margin-bottom: 3%;
+}
+
+footer {
+    background-color: #011627;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width:600px) {
+    .social li {
+        display: inline-block;
+    }
+    .social span {
+        display: none;
+    }
+}

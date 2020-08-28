@@ -6,9 +6,8 @@
 
  ul {
      /* remove default margins and paddings  */
-     margin: 0px;
+     display: flex;
      padding: 0px;
-     justify-items: center;
      justify-content: center;
  }
  /* li */
@@ -20,6 +19,7 @@
      display: inline-block;
      /* float the links to the right */
      float: right;
+     margin-right: 10%;
  }
  /* logo */
 
