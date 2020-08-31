@@ -12,7 +12,7 @@
         </div>
 
         <!-- list of New Arrivals -->
-        <a class="box shd-1 mg-2 pad-10 col-2 col-sm-half " *ngFor="let product of products">
+        <a class="box shd-1 mg-2 pad-10 col-2 col-sm-half " *ngFor="let product of products" (click)="selectProduct(product)">
 
             <!-- product Image -->
             <div class="imageContainer">
@@ -29,8 +29,11 @@
                 {{product.price|currency:'NGN'}}
             </div>
         </a>
-
     </div>
+
+    <!-- display the selected Product  -->
+    <app-product-detail class="col-12" [product]="selectedProduct"></app-product-detail>
+
 
 
 </div>

@@ -1,6 +1,6 @@
 <div class="box pad-1">
     <!-- slide Images -->
-    <img class="rad-10" data-slideImage alt="">
+    <img data-slideImage>
 
     <!-- slide controls -->
     <span (click)="displayPreviousSlide()" class=" previousSlide fa fa-chevron-left col-1 "></span>
@@ -9,7 +9,8 @@
     <!-- indicators -->
     <div>
         <ul>
-            <li class="fa fa-circle mg-1 " *ngFor="let slideImage of slideImages " (click)="goToSlide(slideImage.imageLocation)"></li>
+            <!-- add angular class binding -->
+            <li class="fa fa-circle mg-1 " *ngFor="let slideImage of slideImages " (click)="goToSlide(slideImage.imageLocation)" [class.active]='slideImage===slideImages[slideImageIndex]'></li>
         </ul>
     </div>
 

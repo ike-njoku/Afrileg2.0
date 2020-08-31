@@ -3,7 +3,7 @@
     cursor: pointer;
     position: relative;
     float: right;
-    margin-top: -30%;
+    margin-top: -25%;
 }
 
 
@@ -13,7 +13,7 @@
     cursor: pointer;
     position: relative;
     float: left;
-    margin-top: -30%;
+    margin-top: -25%;
 }
 
 
@@ -21,7 +21,7 @@
 
 img {
     width: 100%;
-    height: 350px;
+    height: 400px;
 }
 
 
@@ -50,4 +50,12 @@ ul li {
 
 .fa:hover {
     opacity: 60%;
+}
+
+
+/* active image indicator */
+
+.active {
+    color: #D95A00;
+    opacity: 100%;
 }

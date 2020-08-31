@@ -66,7 +66,9 @@ export class ImageSlideComponent implements OnInit {
     clearInterval(this.changeImage);
     //  find the indexposition of the image with the given locaion
     for (let i = 0; i < this.slideImages.length; i++) {
-    if(this.slideImages[i].imageLocation === imagelocation){this.slideImageIndex = i;}
+
+      if (this.slideImages[i].imageLocation === imagelocation){this.slideImageIndex = i;}
+
     }
 
 

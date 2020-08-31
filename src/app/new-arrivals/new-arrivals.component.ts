@@ -11,6 +11,15 @@ export class NewArrivalsComponent implements OnInit {
 
   products: Products [] = PRODUCTS.slice();
 
+  // selected Product
+  selectedProduct: Products;
+
+  // selectedProduct takes a parameter product of type products
+  selectProduct(product: Products){
+    this.selectedProduct = product;
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,36 @@
-<p>product-detail works!</p>
+<div *ngIf="product" class="container">
+    <!-- display the products image slide -->
+    <div class="col-6  col-sm-full shd-1 imageContainer">
+        <!-- make this into a slide show -->
+        <img src="{{product.image1}}" alt="">
+
+        <!-- make the indicators to be smaller versions of all the images -->
+        <div class="indicatorContainer">
+            <hr>
+            <img *ngFor="let productImage of product.images" src="{{productImage}}" alt="" class="slideIndicator">
+
+        </div>
+
+    </div>
+
+    <!-- show the three different views of the images that constitute the image slide -->
+
+
+    <!-- product details  -->
+    <div class=" col-6 col-sm-full pad-10">
+        <div class=" col-10 header">
+            {{product.name}}
+
+        </div>
+        <!-- rating -->
+        <div class="col-12 mg-3">
+            <i class="fa fa-star rating"></i> {{product.rating}}
+        </div>
+
+        <!-- description -->
+        <div class="col-12">
+            {{product.description}}
+        </div>
+    </div>
+
+</div>

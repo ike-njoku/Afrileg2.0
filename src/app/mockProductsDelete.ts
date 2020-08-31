@@ -1,3 +1,4 @@
+import { getLocaleEraNames } from '@angular/common';
 import { Products } from './productInterface';
 
 
@@ -12,6 +13,7 @@ export const PRODUCTS: Products[] = [
   image1: '/assets/products/winterCoat.jpg',
   image2: '/assets/products/winterCoat.jpg',
   image3: '/assets/products/winterCoat.jpg',
+  images: []
 
  },
  {id : 2,
@@ -23,6 +25,7 @@ export const PRODUCTS: Products[] = [
   image1: '/assets/products/mackbook.jpg',
   image2: '/assets/products/mackbook.jpg',
   image3: '/assets/products/mackbook.jpg',
+  images: []
 
  },
  {id : 3,
@@ -33,7 +36,8 @@ export const PRODUCTS: Products[] = [
   rating : 5.0,
   image1: '/assets/products/headSets.jpg',
   image2: '/assets/products/headSets.jpg',
-  image3: '/assets/products/headSets.jpg'
+  image3: '/assets/products/headSets.jpg',
+  images: []
 
  },
  {id : 4,
@@ -45,6 +49,7 @@ export const PRODUCTS: Products[] = [
   image1: '/assets/products/ashchair.jpg',
   image2: '/assets/products/ashchair.jpg',
   image3: '/assets/products/ashchair.jpg',
+  images: []
 
  },
  {id : 5,
@@ -56,6 +61,7 @@ export const PRODUCTS: Products[] = [
   image1: 'assets/products/blueBag.jpg',
   image2: 'assets/products/blueBag.jpg',
   image3: 'assets/products/blueBag.jpg',
+  images: [],
 
  },
 
@@ -68,6 +74,7 @@ export const PRODUCTS: Products[] = [
   image1: '/assets/products/camera.jpg',
   image2: '/assets/products/camera.jpg',
   image3: '/assets/products/camera.jpg',
+  images: [],
 
  },
  {id : 7,
@@ -79,6 +86,7 @@ export const PRODUCTS: Products[] = [
   image1: '/assets/products/airpods.jpg',
   image2: '/assets/products/airpods.jpg',
   image3: '/assets/products/airpods.jpg',
+  images: [],
 
  },
  {id : 6,
@@ -90,6 +98,7 @@ export const PRODUCTS: Products[] = [
   image1: '/assets/products/camera.jpg',
   image2: '/assets/products/camera.jpg',
   image3: '/assets/products/camera.jpg',
+  images: [],
 
  },
  {id : 4,
@@ -101,16 +110,18 @@ export const PRODUCTS: Products[] = [
   image1: '/assets/products/ashchair.jpg',
   image2: '/assets/products/ashchair.jpg',
   image3: '/assets/products/ashchair.jpg',
+  images: [],
 
  },
  {id : 1,
   name : ' Winter Jacket',
   price : 4500,
-  description : 'Furry Winter Coat',
+  description : 'What is Lorem Ipsum there was once a mad called david. he had girlfriend who many times, did not show as much care as he had hoped whe would. when days passed and passed and things became tougher and thougher, he ran away... there was a man in jericho called zacheous. The people were tall and he was a very short man. but The Lord looked up and said Zacheous come down',
   inventry : 70,
   rating : 4.5,
   image1: '/assets/products/winterCoat.jpg',
   image2: '/assets/products/winterCoat.jpg',
   image3: '/assets/products/winterCoat.jpg',
+  images: ['hello world', 'one'],
  },
 ]

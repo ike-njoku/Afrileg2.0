@@ -9,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hot-selling.component.css']
 })
 export class HotSellingComponent implements OnInit {
+  // products of type Product Interface (array) = the array of products returned by the hero Sercice
   products: Products[] = PRODUCTS;
+
   constructor() { }
 
   ngOnInit(): void {

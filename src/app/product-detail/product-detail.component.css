@@ -1,0 +1,12 @@
+img {
+    width: 100%;
+}
+
+
+/* slide indicators for the slide show of imaeges */
+
+.slideIndicator {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
