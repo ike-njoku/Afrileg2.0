@@ -8,6 +8,7 @@ import { Products } from '../productInterface';
 export class ProductDetailComponent implements OnInit {
   @Input() product: Products;
 
+
   constructor() { }
 
   ngOnInit(): void {

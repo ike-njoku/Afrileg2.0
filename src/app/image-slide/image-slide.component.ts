@@ -10,8 +10,10 @@ export class ImageSlideComponent implements OnInit {
   // ---------------------- current image being displayed (property)
   slideImageIndex = 0;
   images;
-  interval = 2000;
+  interval = 2500;
   changeImage;
+  // property that allows to add or remove animations
+  animate;
   constructor() {}
   // the property (slideImages) is of type slideImage(interface) and is equal to the array of slide Images returned over the server
   slideImages: SlideImage[] = SLIDEIMAGES;
@@ -83,10 +85,8 @@ export class ImageSlideComponent implements OnInit {
 
 updateDisplay(){
   let image = document.querySelector('[data-slideImage]');
-  image.classList.remove('fadeIn');
   image.src = this.slideImages[this.slideImageIndex].imageLocation;
-  image.classList.add('fadeIn');
-
+  this.animate = true;
 }
 
   ngOnInit(): void {

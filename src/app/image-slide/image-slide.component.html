@@ -10,7 +10,7 @@
     <div>
         <ul>
             <!-- add angular class binding -->
-            <li class="fa fa-circle mg-1 " *ngFor="let slideImage of slideImages " (click)="goToSlide(slideImage.imageLocation)" [class.active]='slideImage===slideImages[slideImageIndex]'></li>
+            <li class="fa fa-circle mg-1 " *ngFor="let slideImage of slideImages " (click)="goToSlide(slideImage.imageLocation)" [class.active]=' slideImage===slideImages[slideImageIndex] '></li>
         </ul>
     </div>
 

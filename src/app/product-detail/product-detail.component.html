@@ -1,13 +1,30 @@
 <div *ngIf="product" class="container">
     <!-- display the products image slide -->
     <div class="col-6  col-sm-full shd-1 imageContainer">
+
+        <!-- buttons (add to cart, save item) -->
+        <div class="mg-2">
+            <button style="justify-content: between; float: right;" class="primary pad-2">
+             Add to cart <i class="fa fa-shopping-cart"></i>
+            </button>
+        </div>
+
+
         <!-- make this into a slide show -->
         <img src="{{product.image1}}" alt="">
+
+        <!-- product price -->
+        <div style="font-weight:bold">
+            {{product.price|currency:'NGN'}}
+        </div>
 
         <!-- make the indicators to be smaller versions of all the images -->
         <div class="indicatorContainer">
             <hr>
-            <img *ngFor="let productImage of product.images" src="{{productImage}}" alt="" class="slideIndicator">
+            <!-- images (slide controls/indicators) -->
+            <img src="{{product.image1}}" alt="" class="slideIndicator">
+            <img src="{{product.image2}}" alt="" class="slideIndicator">
+            <img src="{{product.image3}}" alt="" class="slideIndicator">
 
         </div>
 
@@ -31,6 +48,24 @@
         <div class="col-12">
             {{product.description}}
         </div>
+    </div>
+
+    <!-- about the seller  -->
+    <div class="col-6 col-sm-full pad-10">
+        <!-- sellername -->
+        <div>
+            sold by: Jumia.com
+
+        </div>
+
+        <!-- location (seller / product) -->
+        <div class="">
+            <i class="fa fa-map-marker"></i> PortHarcourt, Nigeria
+
+        </div>
+
+        <!-- seller rating -->
+        seller Rating: 4.1 <i class="fa fa-star rating"></i>
     </div>
 
 </div>
