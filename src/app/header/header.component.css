@@ -3,7 +3,7 @@
      grid-template-columns: repeat(10, 1fr);
  }
  /* unordered list */
-
+ 
  ul {
      /* remove default margins and paddings  */
      display: flex;
@@ -11,24 +11,22 @@
      justify-content: center;
  }
  /* li */
-
+ 
  li {
      /* remove bullet points */
      list-style-type: none;
      /* set arrange list items on one line */
      display: inline-block;
-     /* float the links to the right */
-     float: right;
      margin-right: 10%;
  }
  /* logo */
-
+ 
  img {
      height: 35px;
  }
  /* input and buttons */
  /* profile Drop Down */
-
+ 
  .profileDropDown {
      width: 20%;
      position: fixed;
@@ -36,7 +34,7 @@
      margin-right: 2%;
      margin-top: -2%;
  }
-
+ 
  input {
      padding: 10px;
      font-size: 18px;
