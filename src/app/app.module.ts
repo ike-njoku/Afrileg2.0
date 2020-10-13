@@ -12,6 +12,8 @@ import { HotSellingComponent } from './hot-selling/hot-selling.component';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { IndexComponent } from './index/index.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     NewArrivalsComponent,
     FooterComponent,
     ProductDetailComponent,
+    IndexComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
