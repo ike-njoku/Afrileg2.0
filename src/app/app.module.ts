@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { ClientLogInComponent } from './client-log-in/client-log-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 import { LandingComponent } from './landing/landing.component';
 import { ImageSlideComponent } from './image-slide/image-slide.component';
 import { HotSellingComponent } from './hot-selling/hot-selling.component';
@@ -21,7 +21,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     AppComponent,
     HeaderComponent,
     CategoriesComponent,
-    ClientLogInComponent,
+    SignInComponent,
     LandingComponent,
     ImageSlideComponent,
     HotSellingComponent,

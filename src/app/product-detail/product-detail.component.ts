@@ -8,6 +8,9 @@ import { Products } from '../productInterface';
 export class ProductDetailComponent implements OnInit {
   @Input() product: Products;
 
+  // display selected Product
+
+
 
   constructor() { }
 
