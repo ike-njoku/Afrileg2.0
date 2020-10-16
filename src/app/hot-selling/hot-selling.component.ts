@@ -1,6 +1,9 @@
-import { PRODUCTS } from './../mockProductsDelete';
+// import products service (injected into the constructor)
+import { ProductsService } from './../products.service';
+// import products interface
 import { Products } from './../productInterface';
 import { Component, OnInit } from '@angular/core';
+
 
 
 @Component({
@@ -9,12 +12,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hot-selling.component.css']
 })
 export class HotSellingComponent implements OnInit {
-  // products of type Product Interface (array) = the array of products returned by the hero Sercice
-  products: Products[] = PRODUCTS;
+  // products of type Product Interface (array) = the array of products returned by the products Service
+  products: Products[];
 
-  constructor() { }
+  // inject the Products service into the constructor
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
+    this.products = this.productsService.getProducts();
   }
 
 }
