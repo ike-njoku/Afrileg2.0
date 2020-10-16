@@ -1,19 +1,23 @@
-<!--form (signup) -->
-<div class="container col-12 pad-8 mg-8 secondary">
-    <div class="header col-12">Slime.com
-        <hr>
-    </div>
+<form action="">
+    <div class="container">
+        <div class=" container col-6 col-sm-full secondary box pad-5 mg-5">
+            <!-- header -->
+            <div class="header col-12">Slime.com
+                <hr>
+            </div>
+            <!-- input fields -->
+            <input type="text" class="pad-2 mg-2 col-12" placeholder="Name">
+            <input type="text" class="pad-2 mg-2 col-12" placeholder="E-mail">
+            <input type="password" class="pad-2 mg-2 col-12" placeholder="Password">
+            <input type="password" class="pad-2 mg-2 col-12" placeholder="Re-Type Password">
 
-    <div class="col-12">
-        <!-- input -->
-        <input type="text" placeholder="Name" class="pad-2 mg-2 col-12">
-        <input type="Email" placeholder="E-mail" class="pad-2 mg-2 col-12">
-        <input type="password" placeholder="Password" class="pad-2 mg-2 col-12">
-        <input type="password" placeholder=" Re-Type Password" class="pad-2 mg-2 col-12">
-    </div>
+            <!-- footer / submit -->
+            <div class="col-12 mg-t-2 mg-b-2">
+                <hr>
+                <a routerLink="/sign-in" class="pad-2 f-right box mg-half"> Sign In </a>
+                <button class="primary pad-2 f-right mg-half">Create Account</button>
+            </div>
 
-    <div class="col-12 mg-t-2">
-        <hr>
-        <button class="primary pad-2 f-right">Create Account</button>
+        </div>
     </div>
-</div>
+</form>
