@@ -16,8 +16,17 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<Products[]>{
+    // fetch array of porducts
     // what this method does is to return the list of all the
     // products in the database model
     return of (PRODUCTS);
   }
+
+  // get porduct (id)
+  // get a single porduct by id
+  getProduct(id: number){
+    // return the product who's property (id) is exactly the same as the parameter (id)
+    return of (PRODUCTS.find(product =>  product.id === id));
+  }
+
 }
