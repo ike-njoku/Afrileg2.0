@@ -21,8 +21,8 @@ const routes: Routes = [
   // -----------------------login / sign in
   {path: 'sign-in', component: SignInComponent},
   {path: 'login', redirectTo: '/sign-in', pathMatch: 'full'},
-  // -----------------------product detail
-  {path: 'product-detail', component: ProductDetailComponent},
+  // -----------------------product detail (parameterized route)
+  {path: 'product-detail/:id', component: ProductDetailComponent},
   // -------------------------page not found
   {path: '**', component: PageNotFoundComponent}
 ];

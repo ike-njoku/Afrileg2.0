@@ -23,7 +23,7 @@ export class NewArrivalsComponent implements OnInit {
   getProducts(){
     this.productsService.getProducts()
       // subscribe to the  service to view products returned by products service
-        .subscribe((products)=>this.products = products);
+        .subscribe((products) => this.products = products);
 
   }
 
