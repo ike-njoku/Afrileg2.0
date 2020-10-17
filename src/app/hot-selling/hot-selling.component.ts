@@ -18,8 +18,14 @@ export class HotSellingComponent implements OnInit {
   // inject the Products service into the constructor
   constructor(private productsService: ProductsService) { }
 
+  // getProducts  (fetch all products)
+  getProducts(){
+    this.productsService.getProducts()
+        .subscribe((products) => this.products = products);
+  }
+
   ngOnInit(): void {
-    this.products = this.productsService.getProducts();
+    this.getProducts();
   }
 
 }

@@ -1,6 +1,6 @@
 import { Products } from './../productInterface';
 import { Component, OnInit } from '@angular/core';
-import { PRODUCTS } from '../mockProductsDelete';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-new-arrivals',
@@ -8,8 +8,8 @@ import { PRODUCTS } from '../mockProductsDelete';
   styleUrls: ['./new-arrivals.component.css']
 })
 export class NewArrivalsComponent implements OnInit {
-
-  products: Products [] = PRODUCTS.slice();
+  // property products is of type (array of products (from products interface))
+  products: Products [];
 
   // selected Product
   selectedProduct: Products;
@@ -19,10 +19,19 @@ export class NewArrivalsComponent implements OnInit {
     this.selectedProduct = product;
   }
 
+  // fetch products using productsService
+  getProducts(){
+    this.productsService.getProducts()
+      // subscribe to the  service to view products returned by products service
+        .subscribe((products)=>this.products = products);
 
-  constructor() { }
+  }
+
+  constructor(private productsService: ProductsService) { }
+
 
   ngOnInit(): void {
+    this.getProducts();
   }
 
 }
