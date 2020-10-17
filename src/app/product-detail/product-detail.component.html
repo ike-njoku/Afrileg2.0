@@ -1,10 +1,10 @@
-<div *ngIf="product" class="container">
+<div *ngIf="product" class="container pad-2">
     <!-- display the products image slide -->
-    <div class="col-6  col-sm-full shd-1 imageContainer">
+    <div class="col-6  col-sm-full shd-1 imageContainer box">
 
         <!-- buttons (add to cart, save item) -->
         <div class="mg-2">
-            <button style="justify-content: between; float: right;" class="primary pad-2">
+            <button class="primary pad-2 f-right">
              Add to cart <i class="fa fa-shopping-cart"></i>
             </button>
         </div>
@@ -14,7 +14,7 @@
         <img src="{{product.image1}}" alt="">
 
         <!-- product price -->
-        <div style="font-weight:bold">
+        <div class="bold">
             {{product.price|currency:'NGN'}}
         </div>
 

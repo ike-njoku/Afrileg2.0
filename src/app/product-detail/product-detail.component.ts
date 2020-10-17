@@ -35,6 +35,11 @@ export class ProductDetailComponent implements OnInit {
         .subscribe((product) => this.product = product);
   }
 
+  // go back (navigate back) on click of button
+  goBack(){
+    this.location.back();
+  }
+
   ngOnInit(): void {
     this.getProduct();
   }
