@@ -1,71 +1,79 @@
-<div *ngIf="product" class="container pad-2">
-    <!-- display the products image slide -->
-    <div class="col-6  col-sm-full shd-1 imageContainer box">
+<!-- if product or not -->
+<ng-container *ngIf="product else elseTemplate">
+    <div class="container pad-2">
+        <!-- display the products image slide -->
+        <div class="col-6  col-sm-full shd-1 imageContainer box">
 
-        <!-- buttons (add to cart, save item) -->
-        <div class="mg-2">
-            <button class="primary pad-2 f-right">
-             Add to cart <i class="fa fa-shopping-cart"></i>
-            </button>
+            <!-- buttons (add to cart, save item) -->
+            <div class="mg-2">
+                <button class="primary pad-2 f-right">
+                Add to cart <i class="fa fa-shopping-cart"></i>
+              </button>
+            </div>
+
+            <!-- make this into a slide show -->
+            <img src="{{product.image1}}" alt="">
+
+            <!-- product price -->
+            <div class="bold">
+                {{product.price|currency:'NGN'}}
+            </div>
+
+            <!-- make the indicators to be smaller versions of all the images -->
+            <div class="indicatorContainer">
+                <hr>
+                <!-- images (slide controls/indicators) -->
+                <img src="{{product.image1}}" alt="" class="slideIndicator">
+                <img src="{{product.image2}}" alt="" class="slideIndicator">
+                <img src="{{product.image3}}" alt="" class="slideIndicator">
+
+            </div>
+
         </div>
 
+        <!-- show the three different views of the images that constitute the image slide -->
 
-        <!-- make this into a slide show -->
-        <img src="{{product.image1}}" alt="">
 
-        <!-- product price -->
-        <div class="bold">
-            {{product.price|currency:'NGN'}}
+        <!-- product details  -->
+        <div class=" col-6 col-sm-full pad-10">
+            <div class=" col-10 header">
+                {{product.name}}
+
+            </div>
+            <!-- rating -->
+            <div class="col-12 mg-3">
+                <i class="fa fa-star rating"></i> {{product.rating}}
+            </div>
+
+            <!-- description -->
+            <div class="col-12">
+                {{product.description}}
+            </div>
         </div>
 
-        <!-- make the indicators to be smaller versions of all the images -->
-        <div class="indicatorContainer">
-            <hr>
-            <!-- images (slide controls/indicators) -->
-            <img src="{{product.image1}}" alt="" class="slideIndicator">
-            <img src="{{product.image2}}" alt="" class="slideIndicator">
-            <img src="{{product.image3}}" alt="" class="slideIndicator">
+        <!-- about the seller  -->
+        <div class="col-6 col-sm-full pad-10">
+            <!-- sellername -->
+            <div>
+                sold by: Jumia.com
 
+            </div>
+
+            <!-- location (seller / product) -->
+            <div class="">
+                <i class="fa fa-map-marker"></i> PortHarcourt, Nigeria
+
+            </div>
+
+            <!-- seller rating -->
+            seller Rating: 4.1 <i class="fa fa-star rating"></i>
         </div>
-
     </div>
+</ng-container>
 
-    <!-- show the three different views of the images that constitute the image slide -->
-
-
-    <!-- product details  -->
-    <div class=" col-6 col-sm-full pad-10">
-        <div class=" col-10 header">
-            {{product.name}}
-
-        </div>
-        <!-- rating -->
-        <div class="col-12 mg-3">
-            <i class="fa fa-star rating"></i> {{product.rating}}
-        </div>
-
-        <!-- description -->
-        <div class="col-12">
-            {{product.description}}
-        </div>
+<ng-template #elseTemplate>
+    <!-- product not found -->
+    <div class="pad-5 header bold box mg-5">
+        Product not found!!
     </div>
-
-    <!-- about the seller  -->
-    <div class="col-6 col-sm-full pad-10">
-        <!-- sellername -->
-        <div>
-            sold by: Jumia.com
-
-        </div>
-
-        <!-- location (seller / product) -->
-        <div class="">
-            <i class="fa fa-map-marker"></i> PortHarcourt, Nigeria
-
-        </div>
-
-        <!-- seller rating -->
-        seller Rating: 4.1 <i class="fa fa-star rating"></i>
-    </div>
-
-</div>
+</ng-template>
