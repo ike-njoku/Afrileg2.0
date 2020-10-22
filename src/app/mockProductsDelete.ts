@@ -89,7 +89,7 @@ export const PRODUCTS: Products[] = [
   images: [],
 
  },
- {id : 6,
+ {id : 8,
   name : 'Camera',
   price : 7800,
   description : 'go Pro Cam',
@@ -101,10 +101,10 @@ export const PRODUCTS: Products[] = [
   images: [],
 
  },
- {id : 4,
+ {id : 9,
   name : 'Ash Chair',
   price : 1730,
-  description : 'Side Chair ',
+  description : 'comfortable chair for your room',
   inventry : 50,
   rating : 2.1,
   image1: '/assets/products/ashchair.jpg',
@@ -113,7 +113,7 @@ export const PRODUCTS: Products[] = [
   images: [],
 
  },
- {id : 1,
+ {id : 10,
   name : ' Winter Jacket',
   price : 4500,
   description : 'What is Lorem Ipsum there was once a mad called david. he had girlfriend who many times, did not show as much care as he had hoped whe would. when days passed and passed and things became tougher and thougher, he ran away... there was a man in jericho called zacheous. The people were tall and he was a very short man. but The Lord looked up and said Zacheous come down',

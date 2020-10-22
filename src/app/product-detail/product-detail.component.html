@@ -1,8 +1,13 @@
 <!-- if product or not -->
 <ng-container *ngIf="product else elseTemplate">
     <div class="container pad-2">
+        <div class="col-12 pad-half mg-b-half smaller bold">
+            <!-- product directory -->
+            Category Name > Sub category Name > Sub-sub category Name > Product Name
+            <hr>
+        </div>
         <!-- display the products image slide -->
-        <div class="col-6  col-sm-full shd-1 imageContainer box">
+        <div class="col-4  col-sm-full shd-1 imageContainer box">
 
             <!-- buttons (add to cart, save item) -->
             <div class="mg-2">
@@ -35,7 +40,7 @@
 
 
         <!-- product details  -->
-        <div class=" col-6 col-sm-full pad-10">
+        <div class=" col-8 col-sm-full pad-10">
             <div class=" col-10 header">
                 {{product.name}}
 
@@ -47,7 +52,9 @@
 
             <!-- description -->
             <div class="col-12">
-                {{product.description}}
+                <h4>
+                    {{product.description}}
+                </h4>
             </div>
         </div>
 

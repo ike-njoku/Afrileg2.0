@@ -15,6 +15,7 @@ export class ProductDetailComponent implements OnInit {
 
 
   constructor(
+
     // to get information about this component's url eg productId
     private route: ActivatedRoute,
     // to extract the product's id using the product service
@@ -28,7 +29,7 @@ export class ProductDetailComponent implements OnInit {
   getProduct(){
     // get the snapshot of the parameter (id) *confer approutingModule.ts  and assign it to a constant called 'id'
     const id = +this.route.snapshot.paramMap.get('id');
-    console.log(id)
+    console.log(id);
     // now that we have gotten the id, return the product with corresponding id using the productService
     this.productsService.getProduct(id)
     // subscribe to the product service from this component

@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SignUpComponent } from './sign-up/sign-up.component';
 // import HTTP client
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     IndexComponent,
     PageNotFoundComponent,
     SignUpComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
