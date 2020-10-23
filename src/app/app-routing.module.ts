@@ -13,7 +13,7 @@ const routes: Routes = [
   // ---------------------index (home)
   {path: '', redirectTo: '/index', pathMatch: 'full' },
   {path: 'index', component: IndexComponent},
-  // -------------other routes
+  // -------------other outes
 
   // --------------------sign up
   {path: 'create-account', component: SignUpComponent},

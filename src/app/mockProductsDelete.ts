@@ -1,4 +1,3 @@
-import { getLocaleEraNames } from '@angular/common';
 import { Products } from './productInterface';
 
 
