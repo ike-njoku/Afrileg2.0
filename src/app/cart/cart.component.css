@@ -1,0 +1,13 @@
+/* input tag (for voucher) */
+
+
+/* table head */
+
+thead {
+    color: #495057;
+    font-size: small;
+}
+
+input {
+    border: thin solid lightgray;
+}

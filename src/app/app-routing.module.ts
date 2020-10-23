@@ -1,3 +1,4 @@
+import { CartComponent } from './cart/cart.component';
 // importing routes and modules
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
@@ -21,8 +22,13 @@ const routes: Routes = [
   // -----------------------login / sign in
   {path: 'sign-in', component: SignInComponent},
   {path: 'login', redirectTo: '/sign-in', pathMatch: 'full'},
+
   // -----------------------product detail (parameterized route)
   {path: 'product-detail/:id', component: ProductDetailComponent},
+
+  // -------------------------------cart
+  {path: 'cart', component: CartComponent},
+
   // -------------------------page not found
   {path: '**', component: PageNotFoundComponent}
 ];
