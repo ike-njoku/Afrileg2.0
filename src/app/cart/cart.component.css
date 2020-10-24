@@ -11,3 +11,19 @@ thead {
 input {
     border: thin solid lightgray;
 }
+
+tr img {
+    width: 80%;
+}
+
+th,
+td {
+    padding: 2%;
+    margin: 2%;
+}
+
+select {
+    border: thin solid lightgray;
+    width: 100%;
+    padding: 5%;
+}

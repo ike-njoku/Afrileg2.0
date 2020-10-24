@@ -123,4 +123,4 @@ export const PRODUCTS: Products[] = [
   image3: '/assets/products/winterCoat.jpg',
   images: ['hello world', 'one'],
  },
-]
+];

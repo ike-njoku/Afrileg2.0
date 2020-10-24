@@ -1,3 +1,8 @@
+import { cart } from './mock-cart-delete';
+// import the cart interface
+import { Cart } from './cartInterface';
+import { HttpClient } from '@angular/common/http';
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +10,11 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getCartDetails(): Cart[]{
+    return cart;
+
+
+  }
 }

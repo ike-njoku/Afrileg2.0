@@ -1,68 +1,92 @@
-<div class="container pad-3">
+<ng-container *ngIf="cartDetails.length; else elseTemplate">
 
-    <!-- cart table -->
-    <table class="col-9 mg-2 col-sm-full pad-3 box border-thin">
-        <!-- table head -->
-        <thead class="container col-12 ">
-            <!-- product -->
-            <tr class="col-5 mg-half">
-                <th>PRODUCT</th>
-            </tr>
-            <!-- quantity -->
-            <tr class="col-3 mg-half">
-                <th>
-                    QUANTITY
-                </th>
-            </tr>
-            <!-- unit const  -->
-            <tr class="col-3 mg-half">
-                <th>PRICE</th>
-            </tr>
-            <!-- row cost  -->
-            <tr class="col-1 mg-half">
-                <th>
-                    <!-- add to wish list / delete -->
-                </th>
-            </tr>
+    <div class="container pad-3">
+        <!-- cart table  -->
+        <div class="col-9 col-sm-full">
+            <table style="text-align: left;" class="shd-1 mg-1 border-thin box pad-2">
+                <thead>
+                    <tr class="container mg-b-2">
+                        <th class='col-6'>PRODUCT </th>
+                        <th class='col-2'>QUANTITY </th>
+                        <th class='col-2'>PRICE </th>
+                        <!-- buttons (add to wish list, remove) -->
+                        <th class='col-2'>hello worlr</th>
+                    </tr>
+                </thead>
+                <!-- table head ends -->
+                <tbody>
+                    <tr class="container mg-b-3" *ngFor="let cartDetail of cartDetails">
+                        <!-- product -->
+                        <td class="container col-6">
+                            <img style='margin-top: -15%;' src="{{cartDetail.product.image1}}" alt="{{cartDetail.product.name}}" class="col-4">
+                            <div class="col-8 smaller">
+                                {{cartDetail.product.name}}
+                                <!-- product preferences -->
+                                <div class="col-12">
+                                    {{cartDetail.preferences.color}} <br> {{cartDetail.preferences.size}}
+                                </div>
+                            </div>
 
-        </thead>
-        <!-- table body -->
-        <tbody>
+                        </td>
 
-            <tr>
-                <td>hello</td>
-            </tr>
-        </tbody>
-    </table>
+                        <!-- Quantity -->
+                        <td class="col-2">
+                            <select name="" id="">
+                        <option value="">{{cartDetail.productQuantity}}</option>
+                      </select>
+                        </td>
 
-    <!-- voucher and summary -->
-    <div style="font-size: large;" class="col-3 mg-2 col-sm-full container">
-        <!-- add voucher -->
-        <div class="mg-b-5 box border-thin pad-5 container col-12 ">
-            <div class="col-12 mg-2">
-                Have a voucher?
-            </div>
-            <input class="border-thin pad-3 col-12 mg-2" type="text" placeholder="Enter a Voucher Code">
+                        <!-- price -->
+                        <td class="col-2">{{cartDetail.product.price|currency:'NGN'}}</td>
+
+                        <!-- buttons -->
+                        <td class="col-2">
+                            <button class="pad-3 mg-2">remove</button>
+                            <button class="pad-3 mg-2">save</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- summary -->
-        <div class=" box border-thin pad-5 col-12 ">
-            <div class="mg-b-5">
-                Total Price:
+
+        <!-- voucher and summary -->
+        <div class="col-3 mg-1 col-sm-full container">
+            <!-- add voucher -->
+            <div class="mg-b-5 box border-thin pad-5 container col-12 ">
+                <div class="col-12 mg-2">
+                    Have a voucher?
+                </div>
+                <input class="border-thin pad-3 col-12 mg-2" type="text" placeholder="Enter a Voucher Code">
             </div>
-            <div class="mg-b-5">
-                Discount:
-            </div>
-            <div class="mg-b-5">
-                Total:
-            </div>
-            <div class="mg-b-5">
-                <hr>
-            </div>
-            <!-- supported card types -->
-            <div class="col-12 imageContainer pad-2">
-                <img height="26" class="col-12" src="/assets/paymentCards/payments.png" alt="">
+
+            <!-- summary -->
+            <div class=" box border-thin pad-5 col-12 ">
+                <div class="mg-b-5">
+                    Total Price:
+                </div>
+                <div class="mg-b-5">
+                    Discount:
+                </div>
+                <div class="mg-b-5">
+                    Total:
+                </div>
+                <div class="mg-b-5">
+                    <hr>
+                </div>
+                <!-- supported card types -->
+                <div class="col-12 imageContainer pad-2">
+                    <img height="26" class="col-12" src="/assets/paymentCards/payments.png" alt="">
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+</ng-container>
+
+<!-- if theres no items in the cart -->
+<ng-template #elseTemplate>
+    <div class="col-12 box shd-1 pad-5 header pad-5 mg-5">
+        There are No items in your cart!!!
+    </div>
+</ng-template>

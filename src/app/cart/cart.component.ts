@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  // property cart details (will be assigned values returned by the cart service)
+  cartDetails;
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
+
+  // get the cart details
+  getCartDetails(){
+    this.cartDetails = this.cartService.getCartDetails();
+  }
+
 
   ngOnInit(): void {
+    // get cart details when the view is initialized
+    this.getCartDetails();
   }
 
 }
