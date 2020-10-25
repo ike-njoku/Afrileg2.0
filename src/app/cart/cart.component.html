@@ -7,7 +7,7 @@
                 <thead>
                     <tr class="container mg-b-2">
                         <th class='col-4 mg-2'>PRODUCT </th>
-                        <th class='col-2 mg-2'>QUANTITY </th>
+                        <th class='col-2 mg-2'>QTY </th>
                         <th class='col-4 mg-2'>PRICE </th>
                         <!-- buttons (add to wish list, remove) -->
                         <th class='col-2 mg-2'></th>
@@ -23,6 +23,11 @@
                                 <div class="col-12 larger bolder mg-b-3">
                                     <!-- name -->
                                     {{cartDetail.product.name}}
+                                </div>
+                                <!-- product brand (if) -->
+                                <div *ngIf="cartDetail.product.brand" class="preference col-12">
+                                    <!-- pipe through titlecase to capitilize initial letter -->
+                                    Brand: {{cartDetail.product.brand |titlecase}}
                                 </div>
                                 <!-- product preferences -->
                                 <!-- color -->
@@ -84,7 +89,7 @@
                 </div>
                 <!-- supported card types -->
                 <div class="col-12 imageContainer pad-2">
-                    <img height="26" class="col-12" src="/assets/paymentCards/payments.png" alt="">
+                    <img height="26" src="/assets/paymentCards/payments.png" alt="">
                 </div>
             </div>
         </div>

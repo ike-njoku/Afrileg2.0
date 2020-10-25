@@ -1,6 +1,7 @@
 export interface Products{
   'id': number;
   'name': string;
+  'brand'?: string;
   'price': number;
   'description': string;
   'inventry': number;
