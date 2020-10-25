@@ -12,9 +12,10 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService) { }
 
-  // get the cart details
+  // get the cart details (using cart service)
   getCartDetails(){
     this.cartService.getCartDetails()
+    // subscribe to cart service from this component
         .subscribe(cartDetails => this.cartDetails = cartDetails);
   }
 

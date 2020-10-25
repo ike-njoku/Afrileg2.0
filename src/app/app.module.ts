@@ -19,6 +19,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 // import HTTP client
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -38,6 +39,7 @@ import { CartComponent } from './cart/cart.component';
     PageNotFoundComponent,
     SignUpComponent,
     CartComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
