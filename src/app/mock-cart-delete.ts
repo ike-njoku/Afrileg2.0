@@ -13,7 +13,7 @@ export const cart: Cart[] = [
   images: []
 
  },
-  preferences:{
+  preferences: {
     color: 'red',
     size: 'xl'
   },

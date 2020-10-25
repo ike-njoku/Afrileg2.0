@@ -3,44 +3,52 @@
     <div class="container pad-3">
         <!-- cart table  -->
         <div class="col-9 col-sm-full">
-            <table style="text-align: left;" class="shd-1 mg-1 border-thin box pad-2">
+            <table style="text-align: left;" class="mg-1 border-thin box pad-2">
                 <thead>
                     <tr class="container mg-b-2">
-                        <th class='col-6'>PRODUCT </th>
-                        <th class='col-2'>QUANTITY </th>
-                        <th class='col-2'>PRICE </th>
+                        <th class='col-4 mg-2'>PRODUCT </th>
+                        <th class='col-2 mg-2'>QUANTITY </th>
+                        <th class='col-4 mg-2'>PRICE </th>
                         <!-- buttons (add to wish list, remove) -->
-                        <th class='col-2'>hello worlr</th>
+                        <th class='col-2 mg-2'></th>
                     </tr>
                 </thead>
                 <!-- table head ends -->
                 <tbody>
                     <tr class="container mg-b-3" *ngFor="let cartDetail of cartDetails">
                         <!-- product -->
-                        <td class="container col-6">
+                        <td class="container col-4 mg-2">
                             <img style='margin-top: -15%;' src="{{cartDetail.product.image1}}" alt="{{cartDetail.product.name}}" class="col-4">
-                            <div class="col-8 smaller">
-                                {{cartDetail.product.name}}
+                            <div class="col-8">
+                                <div class="col-12 larger bolder mg-b-3">
+                                    <!-- name -->
+                                    {{cartDetail.product.name}}
+                                </div>
                                 <!-- product preferences -->
-                                <div class="col-12">
-                                    {{cartDetail.preferences.color}} <br> {{cartDetail.preferences.size}}
+                                <!-- color -->
+                                <div *ngIf="cartDetail.preferences.color" class="preference col-12">
+                                    Color: {{cartDetail.preferences.color}}
+                                </div>
+                                <!-- size -->
+                                <div *ngIf="cartDetail.preferences.size" class="preference col-12">
+                                    Size: {{cartDetail.preferences.size}}
                                 </div>
                             </div>
 
                         </td>
 
                         <!-- Quantity -->
-                        <td class="col-2">
+                        <td class="col-2 mg-2">
                             <select name="" id="">
                         <option value="">{{cartDetail.productQuantity}}</option>
                       </select>
                         </td>
 
                         <!-- price -->
-                        <td class="col-2">{{cartDetail.product.price|currency:'NGN'}}</td>
+                        <td class="col-4 mg-2 smaller">{{cartDetail.product.price|currency:'NGN'}}</td>
 
                         <!-- buttons -->
-                        <td class="col-2">
+                        <td class="col-2 mg-2">
                             <button class="pad-3 mg-2">remove</button>
                             <button class="pad-3 mg-2">save</button>
                         </td>

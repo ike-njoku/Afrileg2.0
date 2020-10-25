@@ -14,9 +14,9 @@ export class CartComponent implements OnInit {
 
   // get the cart details
   getCartDetails(){
-    this.cartDetails = this.cartService.getCartDetails();
+    this.cartService.getCartDetails()
+        .subscribe(cartDetails => this.cartDetails = cartDetails);
   }
-
 
   ngOnInit(): void {
     // get cart details when the view is initialized
