@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// import components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,7 +11,6 @@ import { ImageSlideComponent } from './image-slide/image-slide.component';
 import { HotSellingComponent } from './hot-selling/hot-selling.component';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
-// import components
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -20,7 +19,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { ErrorComponent } from './error/error.component';
-
+// mimic db
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 
 @NgModule({
@@ -44,7 +45,14 @@ import { ErrorComponent } from './error/error.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    // inMemoryDataService
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+    InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

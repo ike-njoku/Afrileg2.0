@@ -6,9 +6,9 @@
             <table style="text-align: left;" class="mg-1 border-thin box pad-2">
                 <thead>
                     <tr class="container mg-b-2">
-                        <th class='col-4 mg-2'>PRODUCT </th>
+                        <th class='col-5 mg-2'>PRODUCT </th>
                         <th class='col-2 mg-2'>QTY </th>
-                        <th class='col-4 mg-2'>PRICE </th>
+                        <th class='col-2 mg-2'>PRICE </th>
                         <!-- buttons (add to wish list, remove) -->
                         <th class='col-2 mg-2'></th>
                     </tr>
@@ -17,7 +17,7 @@
                 <tbody>
                     <tr class="container mg-b-3" *ngFor="let cartDetail of cartDetails">
                         <!-- product -->
-                        <td class="container col-4 mg-2">
+                        <td class="container col-5 mg-2">
                             <img style='margin-top: -15%;' src="{{cartDetail.product.image1}}" alt="{{cartDetail.product.name}}" class="col-4">
                             <div class="col-8">
                                 <div class="col-12 larger bolder mg-b-3">
@@ -50,18 +50,19 @@
                         </td>
 
                         <!-- price -->
-                        <td class="col-4 mg-2 smaller">{{cartDetail.product.price|currency:'NGN'}}</td>
+                        <td class="col-2 mg-2 smaller preference">
+                            {{cartDetail.product.price|currency:'NGN'}} <b>Each</b>
+                        </td>
 
                         <!-- buttons -->
                         <td class="col-2 mg-2">
-                            <button class="pad-3 mg-2">remove</button>
+                            <button (click)="removeProduct()" class="pad-3 mg-2">remove</button>
                             <button class="pad-3 mg-2">save</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
 
         <!-- voucher and summary -->
         <div class="col-3 mg-1 col-sm-full container">

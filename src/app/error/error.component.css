@@ -1,0 +1,15 @@
+/* error message colors */
+
+
+/* successful */
+
+.successful {
+    background-color: #29BF12;
+}
+
+
+/* unsuccesful */
+
+.unsuccessful {
+    background-color: RED;
+}

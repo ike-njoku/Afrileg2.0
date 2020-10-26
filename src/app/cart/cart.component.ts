@@ -1,3 +1,4 @@
+import { ErrorService } from './../error.service';
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 
@@ -10,7 +11,11 @@ export class CartComponent implements OnInit {
   // property cart details (will be assigned values returned by the cart service)
   cartDetails;
 
-  constructor(private cartService: CartService) { }
+  constructor(
+    // cart service to add/ remove /fetch cart detail
+    private cartService: CartService,
+    private errorMessageService: ErrorService
+    ) { }
 
   // get the cart details (using cart service)
   getCartDetails(){
@@ -19,9 +24,19 @@ export class CartComponent implements OnInit {
         .subscribe(cartDetails => this.cartDetails = cartDetails);
   }
 
+  // remove product from cart
+  removeProduct(){
+    this.cartService.removeProduct();
+    // display the error message
+    this.errorMessageService.addErrorMessage('Removed This Product', true);
+  }
+
   ngOnInit(): void {
     // get cart details when the view is initialized
     this.getCartDetails();
   }
 
+
+
 }
+

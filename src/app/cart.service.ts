@@ -18,4 +18,9 @@ export class CartService {
   getCartDetails(): Observable<Cart[]>{
     return of (cart);
   }
+
+  // remove product from cart
+  removeProduct(){
+    console.log('removed');
+  }
 }
