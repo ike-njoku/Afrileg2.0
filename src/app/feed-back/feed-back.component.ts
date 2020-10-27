@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ErrorService } from '../error.service';
+import { FeedBackService } from '../feed-back.service';
 
 @Component({
   selector: 'app-error',
@@ -8,7 +8,7 @@ import { ErrorService } from '../error.service';
 })
 export class FeedBackComponent implements OnInit {
   // initialize the property
-  constructor(public errorMessageService: ErrorService) {}
+  constructor(public errorMessageService: FeedBackService) {}
 
 
   ngOnInit(): void {

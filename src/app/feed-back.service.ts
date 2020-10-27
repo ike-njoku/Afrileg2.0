@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 
 
-export class ErrorService {
+export class FeedBackService {
   // create an emppty array which is the error message
   errorMessage: string[] = [];
   // create a property (optional) called response type (negative or positive .....(check addErrorMessage) )

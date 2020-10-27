@@ -1,4 +1,4 @@
-import { ErrorService } from './../error.service';
+import { FeedBackService } from '../feed-back.service';
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 
@@ -17,7 +17,7 @@ export class CartComponent implements OnInit {
   constructor(
     // cart service to add/ remove /fetch cart detail
     private cartService: CartService,
-    private errorMessageService: ErrorService
+    private errorMessageService: FeedBackService
     ) { }
 
   // get the cart details (using cart service)
