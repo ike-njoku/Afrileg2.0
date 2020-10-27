@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class InMemoryDataService {
 
   createDb(){
-    const cart =[
+    const cartDetails =[
       {product:
         {id : 1,
         name : ' Winter Jacket',
@@ -55,7 +55,8 @@ export class InMemoryDataService {
         preferences:
         {color: 'Blue'},
         productQuantity: 2}
-    ]
+    ];
+    return {cartDetails};
   }
 
   constructor() { }

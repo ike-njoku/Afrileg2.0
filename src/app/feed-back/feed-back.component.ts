@@ -3,10 +3,10 @@ import { ErrorService } from '../error.service';
 
 @Component({
   selector: 'app-error',
-  templateUrl: './error.component.html',
-  styleUrls: ['./error.component.css']
+  templateUrl: './feed-back.component.html',
+  styleUrls: ['./feed-back.component.css']
 })
-export class ErrorComponent implements OnInit {
+export class FeedBackComponent implements OnInit {
   // initialize the property
   constructor(public errorMessageService: ErrorService) {}
 

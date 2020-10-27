@@ -1,0 +1,13 @@
+<!-- display feedback if -->
+<div *ngIf="errorMessageService.errorMessage.length" class="container shd-1 col-12">
+    <ng-container *ngIf="errorMessageService.responseType && errorMessageService.responseType; else elseTemplate">
+        <div class="col-12 pad-1 box successful">
+            {{errorMessageService.errorMessage}}
+        </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <div class="col-12 pad-1 box unsuccessful">
+            {{errorMessageService.errorMessage}}
+        </div>
+    </ng-template>
+</div>

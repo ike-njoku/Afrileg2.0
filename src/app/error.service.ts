@@ -27,10 +27,9 @@ export class ErrorService {
   // setTimeout to remove the errorMessage
 
   resetResponseType(){
-    setTimeout(() => this.responseType = false, 900);
+     // clear the errorMessage
+    setTimeout(() => {this.responseType = false; this.clearErrorMessage(); }, 900);
 
-    // clear the errorMessage
-    // this.clearErrorMessage();
   }
 
 

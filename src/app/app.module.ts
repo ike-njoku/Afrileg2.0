@@ -18,7 +18,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 // import HTTP client
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
-import { ErrorComponent } from './error/error.component';
+import { FeedBackComponent } from './feed-back/feed-back.component';
 // mimic db
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -40,7 +40,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     PageNotFoundComponent,
     SignUpComponent,
     CartComponent,
-    ErrorComponent,
+    FeedBackComponent,
   ],
   imports: [
     BrowserModule,

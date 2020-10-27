@@ -8,6 +8,9 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+
+  // cart details url(shouldnt be changed)
+
   // property cart details (will be assigned values returned by the cart service)
   cartDetails;
 
