@@ -17,7 +17,7 @@ export class CartComponent implements OnInit {
   constructor(
     // cart service to add/ remove /fetch cart detail
     private cartService: CartService,
-    private errorMessageService: FeedBackService
+    private feedBackService: FeedBackService
     ) { }
 
   // get the cart details (using cart service)
@@ -31,7 +31,7 @@ export class CartComponent implements OnInit {
   removeProduct(){
     this.cartService.removeProduct();
     // display the error message
-    this.errorMessageService.addErrorMessage('Removed This Product', true);
+    this.feedBackService.addfeedBack('Removed This Product', true);
   }
 
   ngOnInit(): void {

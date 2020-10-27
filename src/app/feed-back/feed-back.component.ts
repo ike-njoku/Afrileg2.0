@@ -8,7 +8,7 @@ import { FeedBackService } from '../feed-back.service';
 })
 export class FeedBackComponent implements OnInit {
   // initialize the property
-  constructor(public errorMessageService: FeedBackService) {}
+  constructor(public feedBackService: FeedBackService) {}
 
 
   ngOnInit(): void {

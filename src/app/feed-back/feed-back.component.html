@@ -1,13 +1,13 @@
 <!-- display feedback if -->
-<div *ngIf="errorMessageService.errorMessage.length" class="container shd-1 col-12">
-    <ng-container *ngIf="errorMessageService.responseType && errorMessageService.responseType; else elseTemplate">
+<div *ngIf="feedBackService.feedBack.length" class="container shd-1 col-12">
+    <ng-container *ngIf="feedBackService.feedBackType && feedBackService.feedBackType; else elseTemplate">
         <div class="col-12 pad-1 box successful">
-            {{errorMessageService.errorMessage}}
+            {{feedBackService.feedBack}}
         </div>
     </ng-container>
     <ng-template #elseTemplate>
         <div class="col-12 pad-1 box unsuccessful">
-            {{errorMessageService.errorMessage}}
+            {{feedBackService.feedBack}}
         </div>
     </ng-template>
 </div>
