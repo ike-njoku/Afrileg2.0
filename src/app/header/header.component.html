@@ -1,29 +1,43 @@
 <!-- navigation bar -->
-<nav class=" secondary pad-1">
+<nav class="secondary container pad-1">
     <!-- logo -->
-    <a routerLink='/index' class="col-2">
-        <img src="/assets/logo.png">
-    </a>
+    <div class="col-4">
+        <a class="" routerLink="/index">
+            <img class="f-left" src="assets/logo.png" alt="">
+        </a>
+    </div>
+
     <!-- search bar -->
-    <input class="col-5" type="text">
-    <button class="col-1 primary">search</button>
+    <div class="col-4 ">
+        <input class="" type="search">
+    </div>
+    <!-- submit button -->
+    <div class="col-1 ">
+        <button class="primary">search</button>
+    </div>
 
 
-    <!-- links (cart, profile) -->
-    <ul class="col-2 links ">
-        <!-- cart -->
-        <li class="f-right">
-            <a> <i class="fa fa-shopping-cart"></i></a>
-        </li>
-        <!-- profile -->
-        <li class="f-right">
-            <!-- show the drop down on mouseover -->
-            <a (mouseover)='showDropDown()'><i class=" fa fa-user"></i></a>
-        </li>
-    </ul>
+    <div class="col-3">
+        <!-- options -->
+        <ul class="links">
+            <li class="f-right">
+                <!-- show the drop down on mouseover -->
+                <a (mouseover)='showDropDown()'><i class=" fa fa-user"></i></a>
+            </li>
+            <!-- cart -->
+            <li class="f-right">
+                <a routerLink="/cart"> <i class="fa fa-shopping-cart"></i>
+                    <div *ngIf="cartDetails.length" class="notification"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </nav>
 
-<div *ngIf="displayProfileDropDown" (mouseleave)='showDropDown()' class="shd-1 pad-2 box neutral profileDropDown">
+
+<!-- profile (options) -->
+<div *ngIf="displayProfileDropDown" (mouseleave)='showDropDown()' class="shd-1 pad-2 box neutral profileDropDown mg-t-10">
     <a class='mg-10 block'> <i class="fa fa-user"></i> Profile</a>
     <a class='mg-10 block'> <i class="fa fa-archive"></i> Orders</a>
     <a class='mg-10 block' routerLink='/login'> <i class="fa fas fa-sign-in"> </i>Log In</a>

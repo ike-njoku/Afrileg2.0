@@ -11,6 +11,7 @@
                         <th class='col-2 mg-2'>PRICE </th>
                         <!-- buttons (add to wish list, remove) -->
                         <th class='col-2 mg-2'></th>
+
                     </tr>
                 </thead>
                 <!-- table head ends -->
@@ -25,18 +26,18 @@
                                     {{cartDetail.product.name}}
                                 </div>
                                 <!-- product brand (if) -->
-                                <div *ngIf="cartDetail.product.brand" class="preference col-12">
+                                <div *ngIf="cartDetail.product.brand" class="preference col-12 inliine mg-l-2">
                                     <!-- pipe through titlecase to capitilize initial letter -->
-                                    Brand: {{cartDetail.product.brand |titlecase}}
+                                    <b>Brand: </b>{{cartDetail.product.brand |titlecase}}
                                 </div>
                                 <!-- product preferences -->
                                 <!-- color -->
-                                <div *ngIf="cartDetail.preferences.color" class="preference col-12">
-                                    Color: {{cartDetail.preferences.color}}
+                                <div *ngIf="cartDetail.preferences.color" class="preference col-12 inliine mg-l-2">
+                                    <b> Color: </b>{{cartDetail.preferences.color}}
                                 </div>
                                 <!-- size -->
-                                <div *ngIf="cartDetail.preferences.size" class="preference col-12">
-                                    Size: {{cartDetail.preferences.size}}
+                                <div *ngIf="cartDetail.preferences.size" class="preference col-12 inliine mg-l-2">
+                                    <b>Size: </b> {{cartDetail.preferences.size}}
                                 </div>
                             </div>
 
@@ -48,7 +49,6 @@
                         <option value="">{{cartDetail.productQuantity}}</option>
                       </select>
                         </td>
-
                         <!-- price -->
                         <td class="col-2 mg-2 smaller preference">
                             {{cartDetail.product.price|currency:'NGN'}} <b>Each</b>
@@ -61,36 +61,41 @@
                         </td>
                     </tr>
                 </tbody>
+                <!-- proceed/previous buttons -->
+                <div class="col-12 pad-1">
+                    <a href="#" class="pad-1 rad-5 border-thin f-right mg-half primary">Continue</a>
+                    <a href="#" class="pad-1 rad-5 border-thin f-right mg-half">previous</a>
+                </div>
             </table>
         </div>
 
         <!-- voucher and summary -->
-        <div class="col-3 mg-1 col-sm-full container">
+        <div class=" col-3 mg-1 col-sm-full container col-3">
             <!-- add voucher -->
-            <div class="mg-b-5 box border-thin pad-5 container col-12 ">
+            <div class="mg-b-5 box border-thin pad-5 container col-12">
                 <div class="col-12 mg-2">
                     Have a voucher?
                 </div>
-                <input class="border-thin pad-3 col-12 mg-2" type="text" placeholder="Enter a Voucher Code">
+                <input class="border-thin pad-3 col-12 mg-2 " type="text " placeholder="Enter a Voucher Code ">
             </div>
 
             <!-- summary -->
             <div class=" box border-thin pad-5 col-12 ">
-                <div class="mg-b-5">
+                <div class="mg-b-5 ">
                     Total Price:
                 </div>
-                <div class="mg-b-5">
+                <div class="mg-b-5 ">
                     Discount:
                 </div>
-                <div class="mg-b-5">
+                <div class="mg-b-5 ">
                     Total:
                 </div>
-                <div class="mg-b-5">
+                <div class="mg-b-5 ">
                     <hr>
                 </div>
                 <!-- supported card types -->
-                <div class="col-12 imageContainer pad-2">
-                    <img height="26" src="/assets/paymentCards/payments.png" alt="">
+                <div class="col-12 imageContainer pad-2 ">
+                    <img height="26 " src="/assets/paymentCards/payments.png " alt=" ">
                 </div>
             </div>
         </div>
@@ -100,7 +105,12 @@
 
 <!-- if theres no items in the cart -->
 <ng-template #elseTemplate>
-    <div class="col-12 box shd-1 pad-5 header pad-5 mg-5">
+    <div class="col-12 box shd-1 pad-5 header pad-5 mg-5 ">
         There are No items in your cart!!!
     </div>
 </ng-template>
+<div class="col-12 pad-5 box larger">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus modi placeat est maxime cupiditate. Odio, ea? Magni reiciendis, minima perferendis libero, esse, itaque maxime assumenda distinctio est tempore rerum ut. Lorem ipsum dolor sit amet consectetur,
+    adipisicing elit. Rem obcaecati modi et nihil? Optio dolores sapiente, eos praesentium minus repudiandae dignissimos aperiam facere quas facilis laudantium ea voluptates modi culpa? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui dolorem
+    officiis voluptatem laborum eaque et tenetur facilis reprehenderit quia, eos enim accusamus hic, ratione velit iure fugit? Voluptate, ex vero!
+</div>

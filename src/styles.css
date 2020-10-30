@@ -9,7 +9,7 @@
         /* background */
         margin: 0px;
         padding: 0px;
-        background-color: #EFEFF0;
+        background-color: #F6F7F9;
     }
     /* margins, padding */
     /* --------------------------paddings-------------------------- */
@@ -242,6 +242,10 @@
         padding-bottom: 10%;
     }
     /* ------------------------------margins-----------------------------   */
+
+    .mg-auto {
+        margin: auto;
+    }
 
     .mg-none {
         margin: 0px;

@@ -1,3 +1,4 @@
+import { CartService } from './../cart.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,19 +7,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-// hide or display the dropdown menu
+  // variable to hold the cartdetails
+  cartDetails;
+
+  // hide or display the dropdown menu
   displayProfileDropDown = false;
   showDropDown(){
-    if(this.displayProfileDropDown === false){
+    if (this.displayProfileDropDown === false){
       this.displayProfileDropDown  = true;
     }else{
       this.displayProfileDropDown = false;
     }
   }
 
-  constructor() { }
+
+
+
+  // cart service
+  constructor(private cartService: CartService) { }
+
+  // get cart details
+  getCartDetails(){
+    this.cartService.getCartDetails()
+    // subscribe to the cart service
+        .subscribe((cartDetails) => this.cartDetails = cartDetails)
+  }
 
   ngOnInit(): void {
+    this.getCartDetails();
   }
 
 }

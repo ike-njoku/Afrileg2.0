@@ -17,7 +17,7 @@ export const cart: Cart[] = [
       color: 'Red',
       size: 'XXL'
     },
-   productQuantity: 7},
+   productQuantity: 7 },
 
    {product:
     {id : 2,
@@ -32,7 +32,7 @@ export const cart: Cart[] = [
      image3: '/assets/products/mackbook.jpg',
      images: []
 
-    },preferences:{}, productQuantity: 12},
+    }, preferences: { }, productQuantity: 12},
 
     {product:
    {id : 9,

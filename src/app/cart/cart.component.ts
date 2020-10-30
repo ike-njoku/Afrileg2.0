@@ -15,7 +15,7 @@ export class CartComponent implements OnInit {
   cartDetails;
 
   constructor(
-    // cart service to add/ remove /fetch cart detail
+    // cart service to add/ remove / fetch cart detail
     private cartService: CartService,
     private feedBackService: FeedBackService
     ) { }
