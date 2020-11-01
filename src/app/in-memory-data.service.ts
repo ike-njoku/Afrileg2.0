@@ -8,7 +8,8 @@ export class InMemoryDataService {
 
   createDb(){
     const cartDetails =[
-      {product:
+      {id: 1,
+        product:
         {id : 1,
         name : ' Winter Jacket',
         price : 4500,
@@ -27,7 +28,8 @@ export class InMemoryDataService {
         },
        productQuantity: 7},
 
-       {product:
+       {id: 2,
+        product:
         {id : 2,
           brand: 'apple',
          name : 'Apple Mac Book ',
@@ -42,7 +44,8 @@ export class InMemoryDataService {
 
         },preferences:{}, productQuantity: 12},
 
-        {product:
+        {id: 3,
+          product:
        {id : 9,
         name : 'Ash Chair',
         price : 1730,

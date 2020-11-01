@@ -4,8 +4,7 @@ import { Cart } from './cartInterface';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-// catching errors
-import { catchError, map, tap } from 'rxjs/operators';
+
 
 
 @Injectable({
@@ -24,8 +23,13 @@ export class CartService {
     return this.http.get<Cart[]>(this.cartDetailsUrl);
   }
 
-  // remove product from cart
-  removeProduct(){
-    console.log('removed');
+  // removeItem
+  removeItem(item: Cart): Observable<Cart> {
+    const id = item.id;
+    const urlToDelete = `${this.cartDetailsUrl}/${id}`;
+
+    return this.http.delete<Cart>(urlToDelete);
   }
+
+
 }

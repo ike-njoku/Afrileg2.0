@@ -1,5 +1,6 @@
+import { Cart } from './../cartInterface';
 import { FeedBackService } from '../feed-back.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class CartComponent implements OnInit {
   // cart details url(shouldnt be changed)
 
   // property cart details (will be assigned values returned by the cart service)
+  cartItem;
   cartDetails;
 
   constructor(
@@ -27,12 +29,17 @@ export class CartComponent implements OnInit {
         .subscribe(cartDetails => this.cartDetails = cartDetails);
   }
 
-  // remove product from cart
-  removeProduct(){
-    this.cartService.removeProduct();
+  // remove product from car
+  removeItem(item: Cart): void{
     // display the error message
     this.feedBackService.addfeedBack('Removed This Product', true);
-  }
+
+    // filter the cartItems and remove the deleted one
+    this.cartDetails = this.cartDetails.filter(h => h !== item);
+
+    // call the cart service
+    this.cartService.removeItem(item).subscribe();
+}
 
   ngOnInit(): void {
     // get cart details when the view is initialized
