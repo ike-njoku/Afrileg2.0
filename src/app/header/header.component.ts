@@ -1,3 +1,4 @@
+import { Cart } from './../cartInterface';
 import { CartService } from './../cart.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -30,8 +31,9 @@ export class HeaderComponent implements OnInit {
   getCartDetails(){
     this.cartService.getCartDetails()
     // subscribe to the cart service
-        .subscribe((cartDetails) => this.cartDetails = cartDetails)
+        .subscribe((cartDetails) => this.cartDetails = cartDetails);
   }
+
 
   ngOnInit(): void {
     this.getCartDetails();

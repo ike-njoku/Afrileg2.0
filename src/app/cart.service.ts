@@ -13,6 +13,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class CartService {
   // url to get cart details from
   private cartDetailsUrl: string = 'api/cartDetails';
+  // number of items in cart
+  public numberOfCarItems;
+
 
   constructor(private http: HttpClient) { }
 
@@ -21,6 +24,13 @@ export class CartService {
   getCartDetails(): Observable<Cart[]>{
     // return as an observable of type cart interface, the information located in the url in the bracket (http.get())
     return this.http.get<Cart[]>(this.cartDetailsUrl);
+  }
+
+  // count number of items in the cart
+  countCartItems(): Observable<number>{
+    this.numberOfCarItems = this.getCartDetails().subscribe()
+    return this.http.get<number>(this.cartDetailsUrl);
+
   }
 
   // removeItem
