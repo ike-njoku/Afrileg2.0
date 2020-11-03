@@ -26,12 +26,7 @@ export class CartService {
     return this.http.get<Cart[]>(this.cartDetailsUrl);
   }
 
-  // count number of items in the cart
-  countCartItems(): Observable<number>{
-    this.numberOfCarItems = this.getCartDetails().subscribe()
-    return this.http.get<number>(this.cartDetailsUrl);
 
-  }
 
   // removeItem
   removeItem(item: Cart): Observable<Cart> {
@@ -41,5 +36,9 @@ export class CartService {
     return this.http.delete<Cart>(urlToDelete);
   }
 
+  // update item quantity
+  updateItemQuantity(item: Cart): Observable<number>{
+
+  }
 
 }
