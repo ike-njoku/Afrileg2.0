@@ -31,8 +31,7 @@ export class CartComponent implements OnInit {
   // remove product from car
   removeItem(item: Cart): void{
     // display the error message
-    this.feedBackService.addfeedBack('Removed This Product', 900,true);
-
+    this.feedBackService.addfeedBack( `Removed  ${item.product.name} from Cart`, 900,true);
     // filter the cartItems and remove the deleted one
     this.cartDetails = this.cartDetails.filter(h => h !== item);
 
