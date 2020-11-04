@@ -26,8 +26,6 @@ export class CartService {
     return this.http.get<Cart[]>(this.cartDetailsUrl);
   }
 
-
-
   // removeItem
   removeItem(item: Cart): Observable<Cart> {
     const id = item.id;

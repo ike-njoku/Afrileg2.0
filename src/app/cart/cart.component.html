@@ -3,7 +3,7 @@
     <div class="container pad-3">
         <!-- cart table  -->
         <div class="col-9 col-sm-full">
-            <table style="text-align: left;" class="mg-1 border-thin box pad-2">
+            <table style="text-align: left;border-top: solid 10px grey; border-top-left-radius: 5px; border-top-right-radius: 5px;" class="mg-1 border-thin box pad-2">
                 <thead>
                     <tr class="container mg-b-2">
                         <th class='col-5 mg-2'>PRODUCT </th>
@@ -45,7 +45,7 @@
 
                         <!-- Quantity -->
                         <td class="col-2 mg-2">
-                          <select name="" id="">
+                            <select name="" id="">
                             <option value="">{{cartDetail.productQuantity}}</option>
                             <option value="">100</option>
                         </select>
@@ -106,7 +106,7 @@
 
 <!-- if theres no items in the cart -->
 <ng-template #elseTemplate>
-    <div class="col-12 box shd-1 pad-5 header pad-5 mg-5 ">
+    <div style="text-align: left;border-top: solid 10px grey; border-top-left-radius: 5px; border-top-right-radius: 5px;" class="col-12 box shd-1 pad-5 header pad-5 mg-5 ">
         There are No items in your cart!!!
     </div>
 </ng-template>
