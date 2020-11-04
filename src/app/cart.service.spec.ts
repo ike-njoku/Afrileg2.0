@@ -13,4 +13,10 @@ describe('CartService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  // -------------more tests
+  // // returns data from server
+  // it('should return datat from the server', () => {
+
+  // });
 });

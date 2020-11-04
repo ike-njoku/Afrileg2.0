@@ -2,6 +2,7 @@ import { Cart } from './../cartInterface';
 import { FeedBackService } from '../feed-back.service';
 import { Component, OnInit} from '@angular/core';
 import { CartService } from '../cart.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -38,6 +39,7 @@ export class CartComponent implements OnInit {
     // call the cart service
     this.cartService.removeItem(item).subscribe();
 }
+
 
   ngOnInit(): void {
     // get cart details when the view is initialized

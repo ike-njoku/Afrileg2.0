@@ -16,10 +16,10 @@ export class CartService {
   // number of items in cart
   public numberOfCarItems;
 
-
   constructor(private http: HttpClient) { }
 
   // get cart details should return an observable of cart details from
+
   // the server
   getCartDetails(): Observable<Cart[]>{
     // return as an observable of type cart interface, the information located in the url in the bracket (http.get())
@@ -36,9 +36,6 @@ export class CartService {
     return this.http.delete<Cart>(urlToDelete);
   }
 
-  // update item quantity
-  updateItemQuantity(item: Cart): Observable<number>{
 
-  }
 
 }
