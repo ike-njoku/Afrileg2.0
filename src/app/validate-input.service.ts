@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ValidateInputService {
 
-  checkUnwantedCharacters(input: string){
+  greet(input: string){
     return(input);
   }
 

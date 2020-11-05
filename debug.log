@@ -12,3 +12,7 @@
 [1104/074548.535:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: The operation completed successfully. (0x0)
 [1104/102528.857:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [1104/180922.424:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1104/193248.935:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\LENOVO\AppData\Local\Temp\karma-38443208\Crashpad\attachments\df18e5a8-8119-4fb2-87cc-42b69a1ab2c1: The system cannot find the path specified. (0x3)
+[1104/193248.971:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: The operation completed successfully. (0x0)
+[1104/193248.973:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1104/193248.974:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)

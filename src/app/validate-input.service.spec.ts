@@ -15,11 +15,11 @@ describe('ValidateInputService', () => {
 
 
   // specific tests
-  it('should return false if input contains unwanted characters ',() => {
+  it('should return false if input contains unwanted characters ', () => {
 
     const inputValidator = new ValidateInputService();
 
-    const result =  inputValidator.checkUnwantedCharacters('Hello');
+    const result =  inputValidator.greet('Hello');
 
     expect(result).toBe('Hello');
   });
