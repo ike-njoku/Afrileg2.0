@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('afrileg2.0 app is running!');
+    expect(page.getTitleText()).toEqual('afrilegPlus app is running!');
   });
 
   afterEach(async () => {
