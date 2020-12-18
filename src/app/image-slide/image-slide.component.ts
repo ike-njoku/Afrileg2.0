@@ -9,6 +9,7 @@ import { SlideImage } from '../slideImageInterface';
 export class ImageSlideComponent implements OnInit {
   // ---------------------- current image being displayed (property)
   slideImageIndex = 0;
+  currentImage ='';
   images;
   interval = 2500;
   changeImage;
@@ -84,8 +85,7 @@ export class ImageSlideComponent implements OnInit {
   }
 
 updateDisplay(){
-  let image = document.querySelector('[data-slideImage]');
-  image.src = this.slideImages[this.slideImageIndex].imageLocation;
+  this.currentImage = this.slideImages[this.slideImageIndex].imageLocation;
   this.animate = true;
 }
 
