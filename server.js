@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-app.use(express.static(__dirname + '/dist/afrilegplus'));
+app.use(express.static(__dirname + '/dist/afrileg2'));
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname +
-        '/dist/afrilegplus/index.html'));
+        '/dist/afrileg2/index.html'));
 });
 app.listen(process.env.PORT || 8080);
